@@ -1,0 +1,28 @@
+#countdown {
+	margin-top: 10px;
+	text-align: center;
+	font-family: "Oleo Script";
+}
+
+#countdown .num {
+	font-size: 400%;
+}
+
+#countdown #days, #countdown #hrs, #countdown #min, #countdown #sec {
+	display: inline-block;
+	width: 10%;
+}
+
+#countdown .num {
+	width: 100%;
+	border-left: white solid 1px;
+}
+
+#countdown #days .num {
+	border: none;
+}
+
+#countdown .d-1, #countdown .d-0 {
+	display: inline-block;
+	width: 20%;
+}

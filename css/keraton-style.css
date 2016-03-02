@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+}
+
+/*==========================
+		PARALLAX
+============================*/
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+/*==========================
+		Navbar
+============================*/
+#navbar {
+	position: fixed;
+	text-align: right;
+	width: 100%;
+}
+
+/*==========================
+		Home
+============================*/
+#home {
+	margin-top: 30px;
+}
+
+#home #logo {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+#home #logo img:not(#pkraden) {
+	width: 100%;
+	margin-top: 75px;
+}
+
+#home #logo #pkraden {
+	position: absolute;
+	z-index: -1;
+	width: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+}
