@@ -5,6 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="css/countdown.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+	.parallax__layer--back {
+		background-image: url(http://www.unsigneddesign.com/Subtle%20Grunge%20Textures/19.jpg);
+	}
+	</style>
 </head>
 
 <body>
@@ -19,7 +25,40 @@
   		<div class="parallax__layer parallax__layer--base">
   			<!-- Navbar -->
   			<div id="navbar">
-  				<h1> <!-- Navbar --></h1>
+  				<div id="menu">
+  					<div class="stamps" id="mark-1">
+  						<img src="img/postmark-1.png">
+  					</div>
+  					<div class="stamps" id="mark-2">
+  						<img src="img/postmark-2.png">
+  					</div>
+  					
+  					<div>
+  						<a href=""><img src="img/home.png"></a>
+  						<span>Home</span>
+  					</div>
+  					<div>
+  						<a href=""><img src="img/about.png"></a>
+  						<span>About</span>
+  					</div>
+  					<div>
+  						<a href=""><img src="img/perf.png"></a>
+  						<span>Events</span>
+  					</div>
+  					<div>
+  						<a href=""><img src="img/vendor.png"></a>
+  						<span>Vendors</span>
+  					</div>
+  					<div>
+  						<a href=""><img src="img/sponsor.png"></a>
+  						<span>Sponsors</span>
+  					</div>
+  					<div>
+  						<a href=""><img src="img/off.png"></a>
+  						<span>Officers</span>
+  					</div>
+  					
+  				</div>
   			</div>
   			<!-- Navbar END -->
 
@@ -65,6 +104,40 @@
   			</div>
   			<!-- Home END -->
 
+  			<!-- Trailer -->
+  			<div id="trailer">
+  				<div class="wrapper">
+	  				<div class="strip"></div>
+
+	  				<div>
+	  					<a href="">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  					<a href="">
+	  						<img class="still" src="img/t-1-placeholder.png">
+	  					</a>
+	  					<a href="">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  					<a href="">
+	  						<img class="still" src="img/t-1-placeholder.png">
+	  					</a>
+	  					<a href="">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  					<a href="">
+	  						<img class="still" src="img/t-1-placeholder.png">
+	  					</a>
+	  					<a href="">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  				</div>
+
+	  				<div class="strip"></div>
+  				</div>
+  			</div>
+  			<!-- Trailer END -->
+
   		</div>
   		<!-- Content END -->
   	</div>
@@ -73,8 +146,52 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   	<script src="js/countdown.js"></script>
   	<script type="text/javascript">
+  	// Trailer stills and gifs
+  	var trailers = {
+  		"img/t-1-placeholder.png": "img/t-1.gif",
+  		"img/t-2-placeholder.png": "img/t-2.gif"
+  	};
+
+  	var gifs = {
+  		"img/t-1.gif" : "img/t-1-placeholder.png",
+  		"img/t-2.gif" : "img/t-2-placeholder.png"
+  	};
+
   	$(document).ready(function () {
   		countdown("May 28, 2016 15:00:00");	
+
+  		// ======================
+  		//			NAVBAR
+  		// ======================
+  		$(".stamps").mouseover(function() {
+  			$(this).css("z-index", 0);
+  		});
+
+  		$("#menu div:not(.stamps)").mouseover(function() {
+  			$('.stamps').css("z-index", 0);
+  		});
+
+  		$(".stamps").mouseout(function() {
+  			$(this).css("z-index", 101);
+  		});
+
+  		$("#menu div:not(.stamps)").mouseout(function() {
+  			$('.stamps').css("z-index", 101);
+  		});
+
+
+  		// =======================
+  		//		TRAILER
+  		// =======================
+  		$("#trailer .still").mouseover(function() {
+  			var key = $(this).attr('src');
+  			$(this).attr("src", trailers[key]);
+  		})
+
+  		$("#trailer .still").mouseout(function() {
+  			var key = $(this).attr('src');
+  			$(this).attr("src", gifs[key]);
+  		})
 	});
   	</script>
 

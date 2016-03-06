@@ -32,7 +32,73 @@ body {
 	position: fixed;
 	text-align: right;
 	width: 100%;
+	z-index: 100;
+	padding-top: 20px;
 }
+
+#navbar #menu {
+	margin-right: 20px;
+}
+
+#navbar #menu div:not(.stamps) {
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+}
+
+#navbar #menu div span {
+	visibility: hidden;
+}
+
+#navbar #menu div:hover span {
+	visibility: visible;
+}
+
+#navbar #menu div:not(.stamps):hover img{
+	-webkit-filter: sepia(0%);
+	filter: sepia(0%);
+	transform: scale(1.01);
+}
+
+#navbar #menu a {
+	display: inline-block;
+}
+
+#navbar #menu div:not(.stamps) img {
+	width: 100%;
+	-webkit-filter: sepia(30%);
+	filter: sepia(30%);
+	-webkit-filter: drop-shadow(1px 0.5px 0.5px rgba(0,0,0,0.5));
+	transition: all 0.5s ease;
+}
+
+#navbar .stamps {
+	position: absolute;
+	z-index: 101;
+}
+
+#navbar .stamps img {
+	width: 100%;
+}
+
+#navbar .stamps:hover {
+	display: none;
+}
+
+#mark-1 {
+	top: -10px;
+	right: 130px;
+	width: 110px;
+	opacity: 0.3;
+}
+
+#mark-2 {
+	top: -20px;
+	right: 300px;
+	width: 150px;
+	opacity: 0.4;
+}
+
 
 /*==========================
 		Home
@@ -59,4 +125,49 @@ body {
 	width: 50%;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+
+/*==========================
+		Trailer
+============================*/
+#trailer {
+	margin-top: 220px;
+	margin-bottom: 200px;
+	position: relative;
+}
+
+#trailer .wrapper {
+	position: absolute;
+	left: -10%;
+	width: 200%;
+	transform: rotate(5deg);
+}
+
+#trailer .strip {
+	background-image: url(../img/strip.png);
+    background-size: 400px 100%;
+    background-repeat-x: repeat;
+    height: 20px;
+}
+
+#trailer div:not(.strip):not(.wrapper) {
+	background-color: rgb(49, 41, 41);
+}
+
+#trailer a {
+	display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 270px;
+}
+
+#trailer div:not(.strip) img {
+	-webkit-filter: sepia(50%);
+	filter: sepia(50%);
+	width: 100%;
 }

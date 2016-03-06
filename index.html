@@ -5,69 +5,76 @@
 	<link rel="stylesheet" type="text/css" href="css/countdown.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		body {
+			background-color: #cfcbc4;
+			background-image: url(img/gate.png);
+    		background-size: 100%;
+		}
+
+		#navbar {
+			text-align: left;
+		}
+
+		#navbar img {
+			width: 50px; 
+			margin-right: 20px; 
+			margin-left: 20px;
+		}
+	</style>
 </head>
 
-<body style="background-color: #cfcbc4;">
-	<div class="parallax">
-		<!-- Background -->
-  		<div class="parallax__layer parallax__layer--back">
-  			<h1> <!--this is the back --></h1>
-  		</div>
-  		<!-- Background END -->
+<body>
+		<!-- Navbar -->
+		<div id="navbar">
+			<a href="../">
+				<img src="img/isauw-logo-white.png">
+			</a>
+		</div>
+		<!-- Navbar END -->
 
-  		<!-- Content -->
-  		<div class="parallax__layer parallax__layer--base">
-  			<!-- Navbar -->
-  			<div id="navbar">
-  				<h1> <!-- Navbar --></h1>
-  			</div>
-  			<!-- Navbar END -->
+		<!-- Home -->
+		<div id="home">
+			<!-- logo -->
+			<div id="logo">
+				<img id="pkraden" src="img/Pak Raden.png">
+				<img src="img/Keraton logo.png">
+			</div>
 
-  			<!-- Home -->
-  			<div id="home">
-  				<!-- logo -->
-  				<div id="logo">
-  					<img id="pkraden" src="img/Pak Raden.png">
-  					<img src="img/Keraton logo.png">
-  				</div>
-
-  				<!-- countdown -->
-  				<div id="countdown">
-					<div id="days" data-label="Days">
-						<div class="num">
-							<span class="d-1">0</span>
-							<span class="d-0">0</span>
-						</div>
-						<span>Days</span>
-					</div>
-					<div id="hrs"  data-label="Hours">
-						<div class="num">
-							<span class="d-1">0</span>
-							<span class="d-0">0</span>
-						</div>
-						<span>Hours</span>
-					</div>
-					<div id="min"  data-label="Minutes">
-						<div class="num">
-							<span class="d-1">0</span>
-							<span class="d-0">0</span>
-						</div>
-						<span>Minutes</span>
-					</div>
-					<div id="sec"  data-label="Seconds">
-						<div class="num">
-							<span class="d-1">0</span>
-							<span class="d-0">0</span>
-						</div>
-						<span>Seconds</span>
-					</div>
+			<!-- countdown -->
+			<div id="countdown">
+			<div id="days" data-label="Days">
+				<div class="num">
+					<span class="d-1">0</span>
+					<span class="d-0">0</span>
 				</div>
-  			</div>
-  			<!-- Home END -->
+				<span>Days</span>
+			</div>
+			<div id="hrs"  data-label="Hours">
+				<div class="num">
+					<span class="d-1">0</span>
+					<span class="d-0">0</span>
+				</div>
+				<span>Hours</span>
+			</div>
+			<div id="min"  data-label="Minutes">
+				<div class="num">
+					<span class="d-1">0</span>
+					<span class="d-0">0</span>
+				</div>
+				<span>Minutes</span>
+			</div>
+			<div id="sec"  data-label="Seconds">
+				<div class="num">
+					<span class="d-1">0</span>
+					<span class="d-0">0</span>
+				</div>
+				<span>Seconds</span>
+			</div>
+		</div>
+		<!-- Home END -->
 
-  		</div>
-  		<!-- Content END -->
-  	</div>
 
   	<!-- Script -->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
