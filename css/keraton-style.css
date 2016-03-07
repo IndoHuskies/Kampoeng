@@ -66,9 +66,7 @@ body {
 
 #navbar #menu div:not(.stamps) img {
 	width: 100%;
-	-webkit-filter: sepia(30%);
-	filter: sepia(30%);
-	-webkit-filter: drop-shadow(1px 0.5px 0.5px rgba(0,0,0,0.5));
+	-webkit-filter: sepia(20%) drop-shadow(1px 0.5px 0.5px rgba(0,0,0,0.5));
 	transition: all 0.5s ease;
 }
 
@@ -170,4 +168,55 @@ body {
 	-webkit-filter: sepia(50%);
 	filter: sepia(50%);
 	width: 100%;
+}
+
+/*==========================
+		EVENTS
+============================*/
+
+#event {
+	/* DEBUG */
+	margin-top: 750px;
+
+	text-align: center;
+}
+
+#event h2 {
+	font-family: 'Oleo Script';
+	font-size: 50px; 
+}
+
+#event hr {
+	width: 50%;
+	margin-bottom: 50px;
+}
+
+#event .wrapper {
+	width: 100%;
+}
+
+#event .ev-item {
+	display: inline-block;
+	width: 300px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#event .ev-item img {
+	width: 100%;
+	-webkit-filter: sepia(30%) drop-shadow(1px 2px 2px rgba(0,0,0,0.5));
+	transition: all 0.5s ease;
+}
+
+#event .ev-item p {
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+#event .ev-item img:hover + p {
+	opacity: 1;
+}
+
+#event .ev-item img:hover {
+	-webkit-filter: sepia(0%) drop-shadow(1px 2px 2px rgba(0,0,0,0.5));
 }
