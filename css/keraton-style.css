@@ -30,79 +30,101 @@ body {
 ============================*/
 #navbar {
 	position: fixed;
-	text-align: right;
 	width: 100%;
 	z-index: 100;
-	padding-top: 20px;
+	text-align: right;
 }
 
-#navbar #menu {
-	margin-right: 20px;
+#logo {
+	right: 35px;
+    position: absolute;
+    top: 20px;
 }
 
-#navbar #menu div:not(.stamps) {
-	display: inline-block;
-	width: 80px;
-	text-align: center;
+#logo img {
+	width: 60px;
 }
 
-#navbar #menu div span {
-	visibility: hidden;
-}
-
-#navbar #menu div:hover span {
-	visibility: visible;
-}
-
-#navbar #menu div:not(.stamps):hover img{
-	-webkit-filter: sepia(0%);
-	filter: sepia(0%);
-	transform: scale(1.01);
-}
-
-#navbar #menu a {
-	display: inline-block;
-}
-
-#navbar #menu div:not(.stamps) img {
-	width: 100%;
-	-webkit-filter: sepia(20%) drop-shadow(1px 0.5px 0.5px rgba(0,0,0,0.5));
-	transition: all 0.5s ease;
-}
-
-#navbar .stamps {
+#trigger {
 	position: absolute;
-	z-index: 101;
+	left: 15px;
+	top: 10px;
+	width: 70px;
+	z-index: 1;
 }
 
-#navbar .stamps img {
+#trigger img {
 	width: 100%;
 }
 
-#navbar .stamps:hover {
+#postcard {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100px;
+	background-color: white;
+	padding-top: 100px;
+}
+
+#navbar:not(.out) #postcard {
+	left: -100px;
+	transition: left 1s ease;
+}
+
+#navbar.out #postcard {
+	left: 0;
+	transition: left 1s ease;
+}
+
+#navbar h2 {
+	text-align: center;
+	font-family: "Oleo Script";
+	cursor: pointer;
+}
+
+#postcard div {
+	height: 60px;
+	margin-right: 15px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+#postcard span {
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 15px;
 	display: none;
 }
 
-#mark-1 {
-	top: -10px;
-	right: 130px;
-	width: 110px;
-	opacity: 0.3;
+#postcard div img {
+	height: 100%;
+	-webkit-filter: sepia(20%) drop-shadow(1px 0.5px 0.5px rgba(0,0,0,0.5));
 }
 
-#mark-2 {
-	top: -20px;
-	right: 300px;
-	width: 150px;
-	opacity: 0.4;
+#postcard div:hover img {
+	-webkit-filter: sepia(0%);
+	transform: scale(1.01);
 }
 
+#postcard div:hover span {
+	display: inline-block;
+}
+
+#postmark {
+	width: 75px;
+    position: absolute;
+    left: 20px;
+    z-index: 10;
+    display: none;
+}
 
 /*==========================
 		Home
 ============================*/
 #home {
 	margin-top: 30px;
+	margin-bottom: 200px;
+	padding-bottom: 200px;
 }
 
 #home #logo {
@@ -130,9 +152,8 @@ body {
 		Trailer
 ============================*/
 #trailer {
-	margin-top: 220px;
-	margin-bottom: 200px;
 	position: relative;
+	height: 200px;
 }
 
 #trailer .wrapper {
@@ -176,7 +197,7 @@ body {
 
 #event {
 	/* DEBUG */
-	margin-top: 750px;
+	margin-top: 300px;
 
 	text-align: center;
 }

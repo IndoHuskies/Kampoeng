@@ -8,47 +8,54 @@
 
 	<style type="text/css">
 	.parallax__layer--back {
-		background-image: url(https://i.ytimg.com/vi/RGrKp6TQj98/maxresdefault.jpg);
+		background-image: url(img/bg-try.png);
+    background-size: 100%;
 	}
+
+  #postcard {
+    background-image: url(http://lh4.ggpht.com/_jFM-Fd8NDFE/S8HKpl-0HVI/AAAAAAAADM8/QPf9O_2Y9zk/s1600/Old%20Paper-1.jpg);
+    background-size: auto 100%;
+    border-right: 1px solid;
+    font-family: "Oleo Script";
+  }
 	</style>
 </head>
 
 <body>
   <!-- Navbar -->
   <div id="navbar">
-    <div id="menu">
-      <div class="stamps" id="mark-1">
-        <img src="img/postmark-1.png">
-      </div>
-      <div class="stamps" id="mark-2">
-        <img src="img/postmark-2.png">
-      </div>
-      
+    <div id="logo">
+      <a href="http://www.isauw.org"><img src="img/isauw-logo-white.png"></a>
+    </div>
+    <div id="trigger">
+      <h2>Menu</h2>
+    </div>
+    <div id="postcard">
+      <img id="postmark" src="img/postmark-1.png">
       <div>
-        <a href="#home"><img src="img/home.png"></a>
-        <span>Home</span>
-      </div>
-      <div>
-        <a href=""><img src="img/about.png"></a>
-        <span>About</span>
+          <a class="page-scroll" href="#home"><img src="img/home.png"></a>
+          <span>Home</span>
       </div>
       <div>
-        <a href="#event"><img src="img/perf.png"></a>
-        <span>Events</span>
+          <a class="page-scroll" href=""><img src="img/about.png"></a>
+          <span>About</span>
       </div>
       <div>
-        <a href=""><img src="img/vendor.png"></a>
-        <span>Vendors</span>
+          <a class="page-scroll" href="#event"><img src="img/perf.png"></a>
+          <span>Events</span>
       </div>
       <div>
-        <a href=""><img src="img/sponsor.png"></a>
-        <span>Sponsors</span>
+          <a class="page-scroll" href=""><img src="img/vendor.png"></a>
+          <span>Vendors</span>
       </div>
       <div>
-        <a href=""><img src="img/off.png"></a>
-        <span>Officers</span>
+          <a class="page-scroll" href=""><img src="img/sponsor.png"></a>
+          <span>Sponsors</span>
       </div>
-      
+      <div>
+          <a class="page-scroll" href=""><img src="img/off.png"></a>
+          <span>Officers</span>
+      </div>
     </div>
   </div>
   <!-- Navbar END -->
@@ -158,14 +165,14 @@
             </div>
 
             <div class="ev-item">
-              <img src="img/ev-perf.png">
+              <img src="img/ev-food.png">
               <p>
                 Photo Jason Chen ^ 
               </p>
             </div>
 
             <div class="ev-item">
-              <img src="img/ev-food.png">
+              <img src="img/ev-food2.png">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
               </p>
@@ -180,6 +187,7 @@
 
   	<!-- Script -->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   	<script src="js/countdown.js"></script>
   	<script type="text/javascript">
   	// Trailer stills and gifs
@@ -194,30 +202,52 @@
   	};
 
   	$(document).ready(function () {
+      var home = $("#home");
+      var events = $("#event");
+
       // Countdown
-  		countdown("May 28, 2016 15:00:00");	
+  		countdown("May 28, 2016 15:00:00");
+
+      // Scrolling	
+      $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('.parallax').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1000, 'easeInQuad');
+
+        //$("#postmark").css("top" , $(this).offset().top - 50);
+        //$("#postmark").css("display", "block");
+        event.preventDefault();
+      });
+
+      // Handle navbar
+      $('.parallax').scroll(function() {
+        var curr = $(".parallax").scrollTop();
+
+        if (curr >= 0 && curr <= home.position().top + home.height()) {
+          // in home
+          $("#postmark").css("top" , $("#postcard div:nth-child(3) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= events.position().top && curr <= events.position().top + events.height()) {
+          // in events
+          $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else {
+          // remove marker
+          $("#postmark").css("display", "none");
+        }
+
+      });
 
       // Parallax back layer size
-      $(".parallax__layer--back").css("height", $("#event").offset().top);      
+      $(".parallax__layer--back").css("height", $("#event").offset().top);     
 
   		// ======================
   		//			NAVBAR
   		// ======================
-  		$(".stamps").mouseover(function() {
-  			$(this).css("z-index", 0);
-  		});
-
-  		$("#menu div:not(.stamps)").mouseover(function() {
-  			$('.stamps').css("z-index", 0);
-  		});
-
-  		$(".stamps").mouseout(function() {
-  			$(this).css("z-index", 101);
-  		});
-
-  		$("#menu div:not(.stamps)").mouseout(function() {
-  			$('.stamps').css("z-index", 101);
-  		});
+  		$("#trigger").click(function() {
+        $("#navbar").toggleClass("out");
+      });
 
 
   		// =======================
