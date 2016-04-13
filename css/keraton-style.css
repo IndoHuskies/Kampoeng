@@ -164,15 +164,14 @@ body {
 ==================*/
 #about {
 	width: 100%;
-	margin: 5%;
+	margin-left: 4%;
 	font-family: Allura, serif;
 	margin-bottom: 100px;
+	position: relative;
 }
 
 #about .left, .right {
 	float: left;
-	width: 45%;
-	padding: 5px;
 	font-size: 2.5em;
 	text-align: center;
 	margin-bottom: 20px;	
@@ -181,41 +180,110 @@ body {
 #about p {
 	font-size: 2.5em;
 	text-align: center;
-	width: 85%;
+	width: 90%;
 }
 
 #about .divider{
 	float:left;
-	padding: 0;
-	margin: 0;
+	padding-left: 20px;
+}
+
+#about .stamp .saveTheDate {
+	height: 200px;
+	width: auto;
+	position: absolute;
+	top: -100px;
+	right: 100px;
+	display: inline-block;
+}
+
+#about .stamp .admission {
+	height: 120px;
+	width: auto;
+	position: absolute;
+	top: 20px;
+	right: 250px;
+	display: inline-block;
+}
+
+#about .stamp .parking {
+	height: 110px;
+	width: auto;
+	position: absolute;
+	top: -10px;
+	right: 330px;
+	display: inline-block;
 }
 
 #about .divider img {
-	height: 350px;
+	height: 400px;
 	width: auto;
 }
 
 #about .left img {
 	-webkit-filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.5));
-	width: 450px;
+	width: 550px;
 	height: auto;
+	background-color: transparent;
 }
 
 #about .left {
-	/* border-right: 3px solid #38546d; */
 	padding-top: 20px;
+	width: 48%;
 }
 
 #about .right {
-	padding-top: 150px;
-	padding-bottom: 70px;
+	padding-top: 200px;
+	padding-bottom: 50px;
+	width: 46%;
+}
+
+#about .time, .city {
+	font-size: 0.8em;
+	padding-top: 0;
+	margin-bottom: 10px;
 }
 
 #about .date, .loc {
 	width: 50%;
-	border-bottom: 2px solid #38546d;
-	margin-bottom: 15px;
+	border-bottom: 1px solid #38546d;
 	margin-left: 50px;
+}
+
+/*==========================
+		Schedule
+============================*/
+
+#schedule p {
+	margin: 20px;
+}
+
+#schedule .timeline {
+	width: 50%;
+	float: left;
+	margin: 0 0 10px;
+	padding: 10px 68px 0 0;
+	position: relative;
+	text-align: right;
+}
+
+#schedule .timeline span {
+	position: absolute;
+	right: 0;
+	top: 30px;
+	font-size: 2em;
+	color: #999;
+}
+
+#schedule .even {
+	float: right;
+	padding: 10px 0 0 68px;
+	text-align: left;
+}
+
+#schedule .even span {
+	left: 0;
+	color: #ca0000;
 }
 
 /*==========================
