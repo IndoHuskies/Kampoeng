@@ -14,7 +14,7 @@
 	}
 
   #postcard {
-    background-image: url(http://lh4.ggpht.com/_jFM-Fd8NDFE/S8HKpl-0HVI/AAAAAAAADM8/QPf9O_2Y9zk/s1600/Old%20Paper-1.jpg);
+    /*background-image: url(http://lh4.ggpht.com/_jFM-Fd8NDFE/S8HKpl-0HVI/AAAAAAAADM8/QPf9O_2Y9zk/s1600/Old%20Paper-1.jpg);*/
     background-size: auto 100%;
     border-right: 1px solid;
     font-family: "Oleo Script";
@@ -29,6 +29,8 @@
       <a href="http://www.isauw.org"><img src="img/isauw-logo-white.png"></a>
     </div>
     <div id="trigger">
+      <div></div>
+      <img src="img/home.png">
       <h2>Menu</h2>
     </div>
     <div id="postcard">
@@ -38,7 +40,7 @@
           <span>Home</span>
       </div>
       <div>
-          <a class="page-scroll" href=""><img src="img/about.png"></a>
+          <a class="page-scroll" href="#about"><img src="img/about.png"></a>
           <span>About</span>
       </div>
       <div>
@@ -172,6 +174,13 @@
         </div>
         <!-- About END -->
 
+
+        <!-- STATS -->
+        <div id="stats">
+          <img src="img/stat.png">
+        </div>
+        <!-- STATS END -->
+
         <!-- Events -->
         <div id="event">
           <h2>Events</h2>
@@ -185,14 +194,14 @@
             </div>
 
             <div class="ev-item">
-              <img src="img/ev-food.png">
+              <img src="img/ev-food2.png">
               <p>
                 Photo Jason Chen ^ 
               </p>
             </div>
 
             <div class="ev-item">
-              <img src="img/ev-food2.png">
+              <img src="img/ev-food.png">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
               </p>
@@ -200,6 +209,7 @@
           </div>
         </div>
         <!-- Events END -->
+
 
   		</div>
   		<!-- Content END -->
@@ -222,7 +232,9 @@
   	};
 
   	$(document).ready(function () {
+      var trigger = $("#trigger img");
       var home = $("#home");
+      var about = $("#about");
       var events = $("#event");
 
       // Countdown
@@ -232,8 +244,11 @@
       $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('.parallax').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).position().top
         }, 1000, 'easeInQuad');
+
+        // close the menu
+        $("#navbar").removeClass("out");
 
         //$("#postmark").css("top" , $(this).offset().top - 50);
         //$("#postmark").css("display", "block");
@@ -244,13 +259,25 @@
       $('.parallax').scroll(function() {
         var curr = $(".parallax").scrollTop();
 
+        
+
         if (curr >= 0 && curr <= home.position().top + home.height()) {
           // in home
+          trigger.attr("src", "img/home.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(2) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= about.position().top && curr <= about.position().top + about.height()) {
+          // in about
+          trigger.attr("src", "img/about.png");
+
           $("#postmark").css("top" , $("#postcard div:nth-child(3) a").offset().top - 50);
           $("#postmark").css("display", "block");
-        } else if (curr >= events.position().top && curr <= events.position().top + events.height()) {
+        } else if (curr >= events.position().top - 1 && curr <= events.position().top + events.height()) {
           // in events
-          $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
+          trigger.attr("src", "img/perf.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(4) a").offset().top - 50);
           $("#postmark").css("display", "block");
         } else {
           // remove marker
