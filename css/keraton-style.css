@@ -166,6 +166,7 @@ body {
 	width: 100%;
 	margin-left: 4%;
 	font-family: Allura, serif;
+	margin-top: 100px;
 	margin-bottom: 100px;
 	position: relative;
 }
@@ -173,14 +174,14 @@ body {
 #about .left, .right {
 	float: left;
 	font-size: 2.5em;
-	text-align: center;
-	margin-bottom: 20px;	
+	text-align: center;	
 }
 
 #about p {
 	font-size: 2.5em;
 	text-align: center;
 	width: 90%;
+	text-shadow: 1px 1px 2px white, 0 0 25px gray;
 }
 
 #about .divider{
@@ -475,6 +476,43 @@ body {
 	margin-left: 10px;
 	font-family: serif;
 }
+
+/*======================
+		Volunteer
+========================*/
+#volunteer{
+	margin: 100px 0;
+	width: 100%;
+	display: inline-block;
+}
+
+#volunteer img{
+	float: left;
+	width: 100%;
+	-webkit-filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.5));
+}
+
+#volunteer .box{
+	display: inline-block;
+	position: relative;
+	width: 40%;
+	margin: 0 4%;
+	float: left;
+}
+
+#volunteer .stamp{
+	position: absolute;
+	display: inline-block;
+	top: 58%;
+	left: 77%;
+	width: 100px; 
+	opacity: 0;
+}
+
+#volunteer a:hover + .stamp {
+	opacity: 1;
+}
+
 
 
 
