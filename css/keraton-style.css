@@ -336,10 +336,41 @@ body {
 ============================*/
 #stats {
 	width: 100vw;
+	position: relative;
+	margin-top: 150px;
 }
 
 #stats img {
 	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+#stats #pola {
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 7em;
+}
+
+#stats #pola img {
+	width: 260px;
+	margin-right: 18px;
+	margin-left: 18px;
+	position: relative;
+	z-index: 0;
+}
+
+#stats #pola img:nth-child(1) {
+	transform: rotate(3deg);
+}
+
+#stats #pola img:nth-child(2) {
+	transform: rotate(-2deg);
+}
+
+#stats #pola img:nth-child(3) {
+	transform: rotate(2deg);
 }
 
 
@@ -350,6 +381,7 @@ body {
 #event {
 	text-align: center;
 	margin-top: 105px;
+	margin-bottom: 150px;
 }
 
 #event h2 {
@@ -403,6 +435,7 @@ body {
 		VENDORS
 ============================*/
 #food {
+	margin-bottom: 150px;
 	width: 100%;
 	text-align: center;
 }
@@ -448,7 +481,7 @@ body {
 	display: inline-block;
 	vertical-align: top;
     margin-top: 50px;
-    -webkit-filter: sepia(30%) drop-shadow(1px 2px 2px rgba(0,0,0,0.5));
+    /*-webkit-filter: sepia(30%) drop-shadow(1px 2px 2px rgba(0,0,0,0.5));*/
 }
 
 #vendor-r2 .vendor {
@@ -514,8 +547,31 @@ body {
 }
 
 
-
-
 /*==========================
-		FOOTER
+		OFFICERS
 ============================*/
+
+#officers {
+	width: 100%;
+	text-align: center;
+	margin-top: 105px;
+	margin-bottom: 150px;
+}
+
+#officers h2 {
+	font-family: 'Oleo Script';
+	font-size: 50px; 
+	display: inline-block;
+}
+
+#officers hr {
+	width: 50px;
+	display: inline-block;
+}
+
+#officers img {
+	width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

@@ -50,15 +50,15 @@
           <span>Events</span>
       </div>
       <div>
-          <a class="page-scroll" href=""><img src="img/vendor.png"></a>
+          <a class="page-scroll" href="#food"><img src="img/vendor.png"></a>
           <span>Vendors</span>
       </div>
       <div>
-          <a class="page-scroll" href=""><img src="img/sponsor.png"></a>
+          <a class="page-scroll" href="#volunteer"><img src="img/sponsor.png"></a>
           <span>Sponsors</span>
       </div>
       <div>
-          <a class="page-scroll" href=""><img src="img/off.png"></a>
+          <a class="page-scroll" href="#officers"><img src="img/off.png"></a>
           <span>Officers</span>
       </div>
     </div>
@@ -192,7 +192,12 @@
 
         <!-- STATS -->
         <div id="stats">
-          <img src="img/stat3.png">
+          <img src="img/rope-pin.png">
+          <div id="pola">
+            <img src="img/pola1.png">
+            <img src="img/pola2.png">
+            <img src="img/pola3.png">
+          </div>
         </div>
         <!-- STATS END -->
 
@@ -223,23 +228,29 @@
           <div class="wrapper">
             <div class="ev-item">
               <img src="img/ev-perf.png">
+              <!--
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
               </p>
+            -->
             </div>
 
             <div class="ev-item">
               <img src="img/jc2.png">
+              <!--
               <p>
                 Photo Jason Chen ^ 
               </p>
+            -->
             </div>
 
             <div class="ev-item">
               <img src="img/ev-food.png">
+              <!--
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
               </p>
+            -->
             </div>
           </div>
         </div>
@@ -428,7 +439,8 @@
                 </div>
               </div>
               
-              <img src="img/f1.png">
+              <!--<img src="img/f3.png">-->
+              <img src="img/ev-food.png" style="width: 450px;margin-left: 25px;margin-right: 25px;">
 
               <div class="v-wrapper">
                 <div class="vendor">
@@ -620,15 +632,24 @@
         </div>
         <!-- Volunteer END -->
 
+        <div id="officers">
+          <div class="title">
+            <hr>
+            <h2>Meet Our Team</h2>
+            <hr>
+          </div>
+          <img src="img/thecommittee.png">
+        </div>
+
   		</div>
   		<!-- Content END -->
   </div>
 
   <!-- Footer -->
   <footer>
-
   </footer>
   <!-- Footer END -->
+
   
 
 
@@ -653,6 +674,10 @@
       var home = $("#home");
       var about = $("#about");
       var events = $("#event");
+      var food = $("#food");
+      var volunteer = $("#volunteer");
+      var officer = $("#officers")
+
 
       // Countdown
   		countdown("May 28, 2016 15:00:00");
@@ -695,6 +720,24 @@
           trigger.attr("src", "img/perf.png");
 
           $("#postmark").css("top" , $("#postcard div:nth-child(4) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= food.position().top - 1 && curr <= food.position().top + food.height()) {
+          // in events
+          trigger.attr("src", "img/vendor.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= volunteer.position().top - 1 && curr <= volunteer.position().top + volunteer.height()) {
+          // in events
+          trigger.attr("src", "img/sponsor.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(6) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= officer.position().top - 1 && curr <= officer.position().top + officer.height()) {
+          // in events
+          trigger.attr("src", "img/off.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(7) a").offset().top - 50);
           $("#postmark").css("display", "block");
         } else {
           // remove marker
