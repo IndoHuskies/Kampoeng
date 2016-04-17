@@ -22,11 +22,11 @@ body {
   transform: translateZ(0);
 }
 .parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) scale(2.1);
 }
 
 /*==========================
-		Navbar
+		NAVBAR
 ============================*/
 #navbar {
 	position: fixed;
@@ -130,7 +130,7 @@ body {
 }
 
 /*==========================
-		Home
+		HOME
 ============================*/
 #home {
 	margin-top: 30px;
@@ -160,7 +160,7 @@ body {
 
 
 /*================
-		About
+		ABOUT
 ==================*/
 #about {
 	width: 100%;
@@ -253,7 +253,7 @@ body {
 }
 
 /*==========================
-		Schedule
+		SCHEDULE
 ============================*/
 
 #schedule p {
@@ -289,7 +289,7 @@ body {
 }
 
 /*==========================
-		Trailer
+		TRAILER
 ============================*/
 #trailer {
 	position: relative;
@@ -511,18 +511,37 @@ body {
 }
 
 /*======================
-		Volunteer
+		VOLUNTEER
 ========================*/
 #volunteer{
-	margin: 100px 0;
+	margin-bottom: 100px;
 	width: 100%;
 	display: inline-block;
+	text-align: center;
+}
+
+#volunteer .title hr {
+	display: inline-block;
+	width: 50px;
+}
+
+#volunteer h2 {
+	display: inline-block;
+	font-family: 'Oleo Script';
+	font-size: 50px;
 }
 
 #volunteer img{
 	float: left;
 	width: 100%;
 	-webkit-filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.5));
+}
+
+#volunteer .desc {
+    display: inline-block;
+    margin-top: 30px;
+    font-family: 'Bree Serif';
+    font-size: 1.4vw;
 }
 
 #volunteer .box{
@@ -536,13 +555,17 @@ body {
 #volunteer .stamp{
 	position: absolute;
 	display: inline-block;
-	top: 58%;
-	left: 77%;
+	top: 52%;
+	left: 74%;
 	width: 100px; 
 	opacity: 0;
 }
 
-#volunteer a:hover + .stamp {
+#volunteer a:hover + a > .stamp {
+	opacity: 1;
+}
+
+#volunteer .stamp:hover {
 	opacity: 1;
 }
 
@@ -554,7 +577,7 @@ body {
 #officers {
 	width: 100%;
 	text-align: center;
-	margin-top: 105px;
+	/* margin-top: 105px; */
 	margin-bottom: 150px;
 }
 
@@ -575,3 +598,273 @@ body {
     margin-right: auto;
     display: block;
 }
+
+/*======================
+		FOOTER
+========================*/
+
+#footer {
+	position: fixed;
+	padding: 15px 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#footer .wrapper {
+	position: relative;
+}
+
+#footer section {
+	position: absolute !important;
+	height: 420px;
+}
+
+#footer-space {
+	width: 100%;
+	height: 80px;
+	background: transparent !important;
+}
+
+#last-section {
+	margin-bottom: -75px !important;
+	padding: 5px 0;
+	color: #FFF;
+}
+
+#last-section nav {
+	opacity: 0.85;
+}
+
+#last-section nav > ul {
+	font-size: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#last-section nav > ul > li {
+	margin: 0 15px;
+	font-size: 26px;
+	display: inline-block;
+}
+
+#last-section nav > ul > li > a {
+	font-family: 'Bree Serif';
+	text-decoration: none;
+	color: black;
+}
+
+
+/* # -- SUBSCRIBE
+================== */
+
+#subscribe {
+	background-image: url('../img/sponsor-f.png');
+	width: 100%;
+	background-size: cover;
+}
+
+#subscribe form {
+	position: relative;
+	margin: 25px auto;
+	padding: 0 20px;
+	max-width: 410px;
+		width: 100%;
+		height: 41px;
+	overflow: hidden;
+}
+
+#subscribe form input,
+#subscribe form .status {
+	display: block;
+}
+
+#subscribe form .status {
+	padding: 10px 0;
+	text-align: center;
+}
+
+#subscribe form input[type="email"] {
+	position: relative;
+	width: 100%;
+	background: #FFF;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+		filter: alpha(opacity=85);
+		opacity: 0.85;
+}
+
+#subscribe form input[type="email"]:focus {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+}
+
+#subscribe form input[type="submit"] {
+	position: absolute;
+	top: 0;
+	right: 20px; /* padding fix */
+	
+	-webkit-border-radius: 0 3px 3px 0;
+			border-radius: 0 3px 3px 0;
+}
+
+
+/* # -- FEEDBACK
+===================*/
+
+#feedback p {
+	color: #7a7d81;
+}
+
+#feedback ul {
+	font-size: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#feedback ul > li {
+	padding: 0 35px;
+	width: 40%;
+	font-size: 16px;
+	vertical-align: top;
+	text-align: left;
+	display: inline-block;
+	font-family: 'Bree Serif';
+
+}
+
+#feedback form > div:last-child {
+	text-align: right;
+}
+
+#feedback form input,
+#feedback form textarea {
+	margin: 10px 0;
+	width: 100%;
+	display: block;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+		filter: alpha(opacity=85);
+		opacity: 0.85;
+}
+
+#feedback form input:focus,
+#feedback form textarea:focus {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+}
+
+#feedback form textarea {
+	height: 150px;
+}
+
+#feedback form input[type="submit"] {
+	margin: 0;
+	margin-left: 20px;
+	width: auto;
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+	
+	vertical-align: middle;
+	display: inline;
+}
+
+#feedback form .status {
+	color: #7a7d81;
+	vertical-align: middle;
+}
+
+
+/* # -- CONTACTS
+==================== */
+
+#contacts {
+	position: relative;
+	padding: 0 100px;
+}
+
+#contacts .text {
+	position: absolute;
+	margin-left: -1px;
+	padding: 30px;
+	width: 30%;
+	height: 82%;
+	background: #252525;
+	background: rgba(38, 38, 38, 0.95);
+	text-align: left;
+	overflow: hidden;
+	z-index: 3;
+	font-family: 'Bree Serif';
+	color: white;
+}
+
+#contacts .text ul {
+	margin: 45px 0;
+}
+
+#contacts .text ul > li {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+		filter: alpha(opacity=70);
+		opacity: 0.7;
+	-webkit-transition: opacity 0.2s; 
+	   -moz-transition: opacity 0.2s; 
+		 -o-transition: opacity 0.2s; 
+		    transition: opacity 0.2s;
+}
+
+#contacts .text ul > li:hover {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+}
+
+#map {
+	background-image: url(../img/gmap-layout.jpg);
+	background-position: 50% 0;
+}
+
+#map .marksys {
+	display: none;
+}
+
+.icon-twitter  	{ background-image: url(../img/01_twitter.png)	   }
+.icon-facebook 	{ background-image: url(../img/02_facebook.png)   }
+.icon-youtube  	{ background-image: url(../img/03_youtube.png)    }
+.icon-instagram { background-image: url(../img/10_instagram.png)  }
+
+ul.social {
+	font-size: 0;
+	list-style: none;
+}
+
+ul.social > li {
+	margin: 0 5px;
+	font-size: 22px;
+	display: inline-block;
+}
+
+/* -- icons -- */
+ul.social.icons > li > a {
+	width: 32px;
+	height: 32px;
+	-webkit-background-size: 32px;
+	   -moz-background-size: 32px;
+	     -o-background-size: 32px;
+			background-size: 32px;
+	display: block;
+	text-decoration: none;
+}
+
+.btn.no-color.current {
+	cursor: default;
+}
+
+.btn.no-color.current,
+.btn.no-color:hover {
+	border-bottom: 2px solid #5C2A19;
+}
+
