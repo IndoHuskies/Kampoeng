@@ -165,7 +165,7 @@ body {
 #about {
 	width: 100%;
 	margin-left: 4%;
-	font-family: Allura, serif;
+	font-family: Italianno, serif;
 	margin-top: 100px;
 	margin-bottom: 100px;
 	position: relative;
@@ -173,15 +173,23 @@ body {
 
 #about .left, .right {
 	float: left;
-	font-size: 2.5em;
+	font-size: 4.6vw;
 	text-align: center;	
 }
 
-#about p {
-	font-size: 2.5em;
+#about .desc {
+	font-size: 2vw;
 	text-align: center;
 	width: 90%;
+	background-color: rgba(179,120,80, 0.5);
+	display: inline-block;
+	font-family: cursive;
+	border-radius: 10px;
 	text-shadow: 1px 1px 2px white, 0 0 25px gray;
+}
+
+#about p {
+	padding: 0 3%;
 }
 
 #about .divider{
@@ -194,29 +202,25 @@ body {
 	height: 200px;
 	width: auto;
 	position: absolute;
-	top: -50px;
+	top: -100px;
 	right: 200px;
-	display: inline-block;
 }
 
 #about .stamp .parking {
 	height: 110px;
 	width: auto;
 	position: absolute;
-	top: 30px;
-	right: 350px;
-	display: inline-block;
+	top: -15px;
+	right: 354px;
 }
 
 #about .stamp .admission {
 	height: 120px;
 	width: auto;
 	position: absolute;
-	top: -10px;
-	right: 455px;
-	display: inline-block;
+	top: -57px;
+	right: 460px;
 	transform: rotate(5deg);
-	opacity: 80%;
 }
 
 #about .divider img {
@@ -235,15 +239,15 @@ body {
 }
 
 #about .right {
-	padding-top: 180px;
+	padding-top: 130px;
 	padding-bottom: 50px;
 	width: 46%;
 }
 
 #about .time, .city {
-	font-size: 0.8em;
+	font-size: 3.6vw;
 	padding-top: 0;
-	margin-bottom: 10px;
+	margin-bottom: 0;
 }
 
 #about .date, .loc {
