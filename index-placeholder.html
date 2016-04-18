@@ -782,7 +782,8 @@
       var events = $("#event");
       var food = $("#food");
       var volunteer = $("#volunteer");
-      var officer = $("#officers")
+      var officer = $("#officers");
+      var footer = $("#footer-space");
 
 
       // Countdown
@@ -804,7 +805,7 @@
       });
 
       // Handle navbar
-      $('.parallax').scroll(function() {
+      $('.parallax').scroll(function(e) {
         var curr = $(".parallax").scrollTop();
 
         
@@ -845,6 +846,8 @@
 
           $("#postmark").css("top" , $("#postcard div:nth-child(7) a").offset().top - 50);
           $("#postmark").css("display", "block");
+        } else if (curr >= footer.position().top - 1 && curr <= footer.position().top + footer.height()) {
+          e.preventDefault();
         } else {
           // remove marker
           $("#postmark").css("display", "none");
@@ -853,7 +856,7 @@
       });
 
       // Parallax back layer size
-      $(".parallax__layer--back").css("height", $("#food").position().top + $("#food").height());     
+      $(".parallax__layer--back").css("height", $("#food").position().top + $("#food").height() - 400);     
 
   		// ======================
   		//			NAVBAR
