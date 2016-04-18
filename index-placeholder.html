@@ -855,8 +855,10 @@
 
       });
 
+      var totalHeight = home.height() + about.height() + events.height() + food.height() + volunteer.height() + officer.height() + footer.height() + $("#trailer").height() / 2;
+
       // Parallax back layer size
-      $(".parallax__layer--back").css("height", $("#food").position().top + $("#food").height() - 400);     
+      $(".parallax__layer--back").css("height", totalHeight);     
 
   		// ======================
   		//			NAVBAR

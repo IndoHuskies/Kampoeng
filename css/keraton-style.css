@@ -22,7 +22,7 @@ body {
   transform: translateZ(0);
 }
 .parallax__layer--back {
-  transform: translateZ(-1px) scale(2.1);
+  transform: translateZ(-1px) scale(2);
 }
 
 /*==========================
