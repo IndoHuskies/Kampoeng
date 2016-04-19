@@ -1,0 +1,260 @@
+@media only screen and (max-device-width: 1024px) {
+	#home #logo {
+		width: 70%;
+	}
+
+	#days > span {
+		font-size: 1.5em;
+	}
+
+	#hrs > span {
+		font-size: 1.5em;
+	}
+
+	#min > span {
+		font-size: 1.5em;
+	}
+
+	#sec > span {
+		font-size: 1.5em;
+	}
+
+	#home {
+		margin-bottom: 100px;
+	}
+
+	#about .desc {
+		font-size: 2.5vw;
+	}
+
+	#about .stamp .saveTheDate {
+		right: 100px;
+	}
+
+	#about .stamp .admission {
+		right: 250px;
+	}
+
+	#about .stamp .parking {
+		right: 320px;
+	}
+
+	#stats #pola {
+		padding-top: 5em;
+		width: 90%;
+	}
+
+	#event .ev-item {
+		margin-bottom: 30px;
+	}
+
+	.vendor {
+		font-size: 1.5em;
+	}
+
+	#vendor-r2 img {
+		display: none;
+	}
+
+	#volunteer .desc {
+		font-size: 2.2vw;
+	}
+
+	#officers img {
+		width: 100%;
+	}
+
+	#subscribe {
+		background-size: 100%;
+    	background-repeat: no-repeat;
+	}
+
+	#feedback p {
+		font-size: 1.2em;
+	}
+
+	#feedback input {
+		font-size: 1.2em;
+	}
+
+}
+
+
+@media only screen and (max-device-width: 414px) {
+	#logo-nv img {
+		width: 6em;
+	}
+
+	#trigger {
+		top: 30px;
+		right: 30px;
+		width: 125px;
+	}
+
+	#trigger h2 {
+		font-size: 2.3em;
+	}
+
+	#postcard {
+		padding-top: 15em;
+	}
+
+	#postcard div {
+		height: 6em;
+		margin-right: 30px;
+		margin-bottom: 50px;
+	}
+
+	#postcard span {
+		position: relative;
+		display: block;
+		margin-top: 0;
+		font-size: 2em;
+	}
+
+	#postmark {
+		width: 100px;
+	}
+
+	#home {
+		margin-top: 50px;
+	}
+
+	#home #logo {
+		width: 85%;
+	}
+
+	#countdown #days, #countdown #hrs, #countdown #min, #countdown #sec {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		font-size: 1.5em;
+		width: 15%;
+	}
+
+	#about {
+		margin-left: 0;
+	}
+
+	#about .desc {
+		font-size: 3.5vw;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#about .left {
+		width: 100%;
+		float: none;
+	}
+
+	#about .right {
+		padding-top: 20px;
+		width: 85%;
+		margin-left: 35%;
+		float: none;
+		font-size: 5em;
+	}
+
+	#about .divider {
+		display: none;
+	}
+
+	#about .time, .city {
+    	font-size: 4.5vw;
+	}
+
+	#stats > img {
+		display: none;
+	}
+
+	#stats #pola img {
+		margin-right: 0;
+		margin-left: 0;
+		width: 33%;
+	}
+
+	#stats #pola img:nth-child(1) {
+		transform: rotate(0);
+	}
+
+	#stats #pola img:nth-child(2) {
+		transform: rotate(0);
+	}
+
+	#stats #pola img:nth-child(3) {
+		transform: rotate(0);
+	}
+
+	#event h2 {
+		font-size: 80px;
+	}
+
+	#event .ev-item {
+		width: 500px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		height: auto;
+	}
+
+	#food h2 {
+		font-size: 80px;
+	}
+
+	#food .vendor {
+		display: block;
+		width: 20em;
+		margin-right: auto;
+		margin-left: auto;
+		font-size: 2.3em;
+	}
+
+	#volunteer h2 {
+		font-size: 80px;
+	}
+
+	#volunteer .box {
+		display: block;
+		width: 80%;
+		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 35px;
+		float: none;
+	}
+
+	#volunteer .desc {
+		font-size: 3.3vw;
+	}
+
+	#officers h2 {
+		font-size: 80px;
+	}
+
+	#last-section nav > ul > li > a {
+		font-size: 2em;
+	}
+
+	#feedback h2 {
+		font-size: 3em;
+	}
+
+	#feedback p {
+		font-size: 2em;
+	}
+
+	#feedback ul > li {
+		width: 80%;
+	}
+
+	#feedback input {
+		font-size: 2.2em;
+	}
+
+	#feedback textarea {
+		font-size: 2.2em;
+	}
+}

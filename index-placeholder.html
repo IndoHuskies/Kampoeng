@@ -2,7 +2,9 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/keraton-style.css">
-	<link rel="stylesheet" type="text/css" href="css/countdown.css">
+  <link rel="stylesheet" type="text/css" href="css/countdown.css">
+
+  <link rel="stylesheet" type="text/css" href="css/keraton-style-mobile.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
@@ -29,8 +31,8 @@
 <body>
   <!-- Navbar -->
   <div id="navbar">
-    <div id="logo">
-      <a href="http://www.isauw.org"><img src="img/isauw-logo-white.png"></a>
+    <div id="logo-nv">
+      <a href="http://www.isauw.org"><img src="img/logo isauw.png"></a>
     </div>
     <div id="trigger">
       <div></div>
@@ -71,7 +73,6 @@
 	<div class="parallax">
 		<!-- Background -->
   		<div class="parallax__layer parallax__layer--back">
-  			<h1> <!--this is the back --></h1>
   		</div>
   		<!-- Background END -->
 
@@ -130,19 +131,19 @@
 	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
 	  						<img class="still" src="img/t-2-placeholder.png">
 	  					</a>
-	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
+	  					<a href="https://www.youtube.com/watch?v=ALWEriVpk_4">
 	  						<img class="still" src="img/t-1-placeholder.png">
 	  					</a>
 	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
 	  						<img class="still" src="img/t-2-placeholder.png">
 	  					</a>
-	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
+	  					<a href="https://www.youtube.com/watch?v=ALWEriVpk_4">
 	  						<img class="still" src="img/t-1-placeholder.png">
 	  					</a>
 	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
 	  						<img class="still" src="img/t-2-placeholder.png">
 	  					</a>
-	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
+	  					<a href="https://www.youtube.com/watch?v=ALWEriVpk_4">
 	  						<img class="still" src="img/t-1-placeholder.png">
 	  					</a>
 	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
@@ -201,9 +202,9 @@
         <div id="stats">
           <img src="img/rope-pin.png">
           <div id="pola">
-            <img src="img/pola1.png">
-            <img src="img/pola2.png">
-            <img src="img/pola3.png">
+            <a href="https://www.facebook.com/media/set/?set=a.841987675892173.1073741852.181217765302504&type=3"><img src="img/pola1.png"></a>
+            <a href="https://www.facebook.com/media/set/?set=a.712361995521409.1073741843.181217765302504&type=3"><img src="img/pola2.png"></a>
+            <a href="https://www.facebook.com/media/set/?set=a.451878401569771.1073741832.181217765302504&type=3"><img src="img/pola3.png"></a>
           </div>
         </div>
         <!-- STATS END -->
@@ -783,7 +784,7 @@
       var food = $("#food");
       var volunteer = $("#volunteer");
       var officer = $("#officers");
-      var footer = $("#footer-space");
+      var footer = $("#footer");
 
 
       // Countdown
@@ -855,10 +856,17 @@
 
       });
 
-      var totalHeight = home.height() + about.height() + events.height() + food.height() + volunteer.height() + officer.height() + footer.height() + $("#trailer").height() / 2;
+      var totalHeight = home.outerHeight() + $("#trailer").outerHeight() + $("#stats").outerHeight() + about.outerHeight() + events.outerHeight() + food.outerHeight() + volunteer.outerHeight() + officer.outerHeight() + footer.outerHeight() - 2 * $(window).height();
 
-      // Parallax back layer size
-      $(".parallax__layer--back").css("height", totalHeight);     
+
+      var screenWidth = $(window).width();
+
+      if (screenWidth < 1000) {
+        $(".parallax__layer--back").css("height", totalHeight - 1.5 * $(window).height()); 
+      } else {
+        // Parallax back layer size
+        $(".parallax__layer--back").css("height", totalHeight);    
+      } 
 
   		// ======================
   		//			NAVBAR
