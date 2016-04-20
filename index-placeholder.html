@@ -947,6 +947,7 @@
     $(window).load(function() {
       $('#loader').animate({opacity: 0}, 1000, 'easeInQuad', function() {
         $('#loader').css("display", "none");
+        $("body").css("overflow", "auto");
       });
     });
   	// Trailer stills and gifs
@@ -1042,6 +1043,12 @@
 
       var totalHeight = home.outerHeight() + $("#trailer").outerHeight() + $("#stats").outerHeight() + about.outerHeight() + events.outerHeight() + food.outerHeight() + volunteer.outerHeight() + officer.outerHeight() + footer.outerHeight() - 0.5 * $(window).height();
 
+
+      var screenWidth = $(window).width();
+
+      if (screenWidth < 414) {
+        totalHeight -= $(window).height();
+      } 
       // Parallax back layer size
       $(".parallax__layer--back").css("height", totalHeight);    
       

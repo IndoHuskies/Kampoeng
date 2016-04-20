@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	overflow: hidden;
 }
 
 #loader {
@@ -8,6 +9,7 @@ body {
 	background-color: #fffaf0;
 	position: relative;
 	font-family: 'Oleo Script';
+	z-index: 10;
 }
 
 #loader .wrapper {
