@@ -1,4 +1,9 @@
 @media only screen and (max-device-width: 1024px) {
+	#loader .wrapper {
+		width: 200px;
+		font-size: 2em;
+	}
+
 	#home #logo {
 		width: 70%;
 	}
@@ -236,6 +241,10 @@
 
 	#last-section nav > ul > li > a {
 		font-size: 2em;
+	}
+
+	#footer {
+		height: 65em;
 	}
 
 	#feedback h2 {
