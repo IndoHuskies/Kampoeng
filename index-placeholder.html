@@ -32,7 +32,7 @@
   <div id="loader">
     <div class="wrapper">
       <img src="img/becak.png">
-      <span>Loading...</span>
+      <span>Loading<span id="dot"></span></span>
     </div>
   </div>
   <!-- Navbar -->
@@ -195,7 +195,7 @@
           </div>
           <div class="desc">
             <p>
-            ISAUW&#8217s signature event, one of the largest Indonesian cultural events in Seattle, Keraton 2016 is back, and we're inviting YOU to join us as we proudly present every bit of our culture throughout the day. 
+            ISAUW&#8217;s signature event, one of the largest Indonesian cultural events in Seattle, Keraton 2016 is back, and we're inviting YOU to join us as we proudly present every bit of our culture throughout the day. 
             <br>
             Experience authentic Indonesian culture, watch incredible dances and music performances, as well as participate in traditional Indonesian games. And of course, eat some very delicious Indonesian food.
             <br>
@@ -944,12 +944,21 @@
   	<script src="js/countdown.js"></script>
     <script src="js/main.js"></script>
   	<script type="text/javascript">
+    var dots = 0;
     $(window).load(function() {
       $('#loader').animate({opacity: 0}, 1000, 'easeInQuad', function() {
         $('#loader').css("display", "none");
         $("body").css("overflow", "auto");
       });
     });
+
+    var imgArray = Array();
+    imgArray[0] = new Image();
+    imgArray[0].src = "img/t-1.gif";
+
+    imgArray[1] = new Image();
+    imgArray[1].src = "img/t-2.gif";
+
   	// Trailer stills and gifs
   	var trailers = {
   		"img/t-1-placeholder.png": "img/t-1.gif",
@@ -983,6 +992,16 @@
     })
 
   	$(document).ready(function () {
+      setInterval(function () {
+        if(dots < 3) {
+            $('#dot').append('.');
+            dots++;
+        } else {
+          $('#dot').text("");
+          dots = 0;
+        }
+      }, 600);
+
       var trigger = $("#trigger img");
       var home = $("#home");
       var about = $("#about");
