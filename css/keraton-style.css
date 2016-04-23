@@ -293,42 +293,6 @@ body {
 }
 
 /*==========================
-		SCHEDULE
-============================*/
-
-#schedule p {
-	margin: 20px;
-}
-
-#schedule .timeline {
-	width: 50%;
-	float: left;
-	margin: 0 0 10px;
-	padding: 10px 68px 0 0;
-	position: relative;
-	text-align: right;
-}
-
-#schedule .timeline span {
-	position: absolute;
-	right: 0;
-	top: 30px;
-	font-size: 2em;
-	color: #999;
-}
-
-#schedule .even {
-	float: right;
-	padding: 10px 0 0 68px;
-	text-align: left;
-}
-
-#schedule .even span {
-	left: 0;
-	color: #ca0000;
-}
-
-/*==========================
 		TRAILER
 ============================*/
 #trailer {
@@ -427,12 +391,12 @@ body {
 #event {
 	text-align: center;
 	margin-top: 105px;
-	margin-bottom: 150px;
+	margin-bottom: 50px;
 }
 
 #event h2 {
 	font-family: 'Oleo Script';
-	font-size: 50px; 
+	font-size: 65px; 
 	display: inline-block;
 }
 
@@ -442,7 +406,6 @@ body {
 }
 
 #event .wrapper {
-	margin-top: 50px;
 	width: 100%;
 }
 
@@ -476,6 +439,61 @@ body {
 	-webkit-filter: sepia(0%) drop-shadow(1px 2px 2px rgba(0,0,0,0.5));
 }
 
+/*==========================
+		SCHEDULE
+============================*/
+
+#schedule {
+	display: inline-block;
+    padding-top: 50px;
+    padding-left: 4%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#schedule h2 {
+	font-family: 'Oleo Script';
+	font-size: 65px; 
+	display: inline-block;
+}
+
+#schedule hr {
+	width: 50px;
+	display: inline-block;
+}
+
+#schedule p {
+	margin: 20px;
+}
+
+#schedule .timeline {
+	width: 50%;
+	float: left;
+	margin: 0 0 10px;
+	padding: 20px 68px 0 0;
+	position: relative;
+	text-align: right;
+	font-family: 'Bree Serif', serif;	
+}
+
+#schedule .timeline span {
+	position: absolute;
+	right: 0;
+	top: 30px;
+	font-size: 2em;
+	color: #999;
+}
+
+#schedule .even {
+	float: right;
+	padding: 20px 0 0 68px;
+	text-align: left;
+}
+
+#schedule .even span {
+	left: 0;
+	color: #ca0000;
+}
 
 /*==========================
 		VENDORS
@@ -494,7 +512,7 @@ body {
 #food h2 {
 	display: inline-block;
 	font-family: 'Oleo Script';
-	font-size: 50px;
+	font-size: 65px;
 }
 
 #food img {
@@ -580,7 +598,7 @@ body {
 #volunteer h2 {
 	display: inline-block;
 	font-family: 'Oleo Script';
-	font-size: 50px;
+	font-size: 65px;
 }
 
 #volunteer img{
@@ -635,7 +653,7 @@ body {
 
 #officers h2 {
 	font-family: 'Oleo Script';
-	font-size: 50px; 
+	font-size: 65px; 
 	display: inline-block;
 }
 
@@ -793,7 +811,12 @@ body {
 ===================*/
 
 #feedback p {
-	color: #7a7d81;
+	color: #6e7074;
+}
+
+#feedback .text {
+	background-color: rgba(213, 167, 121, 0.85);
+	border-radius: 5px;
 }
 
 #feedback ul {
