@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="css/countdown.css">
 
   <link rel="stylesheet" type="text/css" href="css/keraton-style-mobile.css">
+  <link rel="stylesheet" type="text/css" href="css/animation.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
@@ -12,7 +13,7 @@
   <link href='https://fonts.googleapis.com/css?family=Rouge+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Italianno|Qwigley|Satisfy' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Volkhov:400,400italic' rel='stylesheet' type='text/css'>
-
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<style type="text/css">
 	.parallax__layer--back {
 		background-image: url(img/bg6.png);
@@ -260,20 +261,35 @@
           <hr>
           <h2>Schedule</h2>
           <hr>
-          <div class="wrapper">
-            <div class="timeline">
-              <span>time</span>
-              <p>
+          <div id="timeline">
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
               </p>
             </div>
 
-            <div class="timeline even">
-              <span>time</span>
-              <p>
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
               </p>
             </div>
+
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            </div>
+
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            </div>
+
           </div>
         </div>
         <!-- Schedule END -->
@@ -1017,6 +1033,7 @@
       var volunteer = $("#volunteer");
       var officer = $("#officers");
       var footer = $("#footer");
+      var schedule = $("#schedule");
 
 
       // Countdown
@@ -1062,19 +1079,19 @@
           $("#postmark").css("top" , $("#postcard div:nth-child(4) a").offset().top - 50);
           $("#postmark").css("display", "block");
         } else if (curr >= food.position().top - 1 && curr <= food.position().top + food.height()) {
-          // in events
+          // in vendors
           trigger.attr("src", "img/vendor.png");
 
           $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
           $("#postmark").css("display", "block");
         } else if (curr >= volunteer.position().top - 1 && curr <= volunteer.position().top + volunteer.height()) {
-          // in events
+          // in volunteer
           trigger.attr("src", "img/sponsor.png");
 
           $("#postmark").css("top" , $("#postcard div:nth-child(6) a").offset().top - 50);
           $("#postmark").css("display", "block");
         } else if (curr >= officer.position().top - 1 && curr <= officer.position().top + officer.height()) {
-          // in events
+          // in officer
           trigger.attr("src", "img/off.png");
 
           $("#postmark").css("top" , $("#postcard div:nth-child(7) a").offset().top - 50);
@@ -1084,6 +1101,27 @@
         } else {
           // remove marker
           $("#postmark").css("display", "none");
+        }
+
+        if (curr >= schedule.position().top - 100) {
+          $('#timeline div:nth-child(1) span').addClass("fadeIn");
+          $('#timeline div:nth-child(1) p').addClass("slideRight");
+        }
+
+        if(curr >= schedule.position().top){
+          $('#timeline div:nth-child(2) span').addClass("fadeIn");
+          $('#timeline div:nth-child(2) p').addClass("slideLeft");
+        
+        }
+        
+        if(curr >= schedule.position().top + 100){
+          $('#timeline div:nth-child(3) span').addClass("fadeIn");
+          $('#timeline div:nth-child(3) p').addClass("slideRight");
+        }
+        
+        if(curr >= schedule.position().top + 200){
+          $('#timeline div:nth-child(4) span').addClass("fadeIn");
+          $('#timeline div:nth-child(4) p').addClass("slideLeft");
         }
 
       });
