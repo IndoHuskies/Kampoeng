@@ -2,86 +2,1142 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/keraton-style.css">
-	<link rel="stylesheet" type="text/css" href="css/countdown.css">
+  <link rel="stylesheet" type="text/css" href="css/countdown.css">
+
+  <link rel="stylesheet" type="text/css" href="css/keraton-style-mobile.css">
+  <link rel="stylesheet" type="text/css" href="css/animation.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
-
+  <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Rouge+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Italianno|Qwigley|Satisfy' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Volkhov:400,400italic' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<style type="text/css">
-		body {
-			background-color: #cfcbc4;
-			background-image: url(img/gate.png);
-    		background-size: 100%;
-		}
+	.parallax__layer--back {
+		background-image: url(img/bg6.png);
+    background-size: 100%;
+    background-position: 0;
+	}
 
-		#navbar {
-			text-align: left;
-		}
-
-		#navbar img {
-			width: 50px; 
-			margin-right: 20px; 
-			margin-left: 20px;
-		}
+  #postcard {
+    /*background-image: url(http://lh4.ggpht.com/_jFM-Fd8NDFE/S8HKpl-0HVI/AAAAAAAADM8/QPf9O_2Y9zk/s1600/Old%20Paper-1.jpg);*/
+    background-size: auto 100%;
+    border-right: 1px solid;
+    font-family: "Oleo Script";
+  }
 	</style>
 </head>
 
 <body>
-		<!-- Navbar -->
-		<div id="navbar">
-			<a href="../">
-				<img src="img/isauw-logo-white.png">
-			</a>
-		</div>
-		<!-- Navbar END -->
+  <div id="loader">
+    <div class="wrapper">
+      <img src="img/becak.png">
+      <span>Loading<span id="dot"></span></span>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <div id="navbar">
+    <div id="logo-nv">
+      <a href="http://www.isauw.org"><img src="img/logo isauw.png"></a>
+    </div>
+    <div id="trigger">
+      <div></div>
+      <img src="img/home.png">
+      <h2>Menu</h2>
+    </div>
+    <div id="postcard">
+      <img id="postmark" src="img/postmark-1.png">
+      <div>
+          <a class="page-scroll" href="#home"><img src="img/home.png"></a>
+          <span>Home</span>
+      </div>
+      <div>
+          <a class="page-scroll" href="#about"><img src="img/about.png"></a>
+          <span>About</span>
+      </div>
+      <div>
+          <a class="page-scroll" href="#event"><img src="img/perf.png"></a>
+          <span>Events</span>
+      </div>
+      <!--<div>
+          <a class="page-scroll" href="#food"><img src="img/vendor.png"></a>
+          <span>Vendors</span>
+      </div>-->
+      <div>
+          <a class="page-scroll" href="#volunteer"><img src="img/sponsor.png"></a>
+          <span>Get Involved</span>
+      </div>
+      <div>
+          <a class="page-scroll" href="#officers"><img src="img/off.png"></a>
+          <span>Officers</span>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar END -->
 
-		<!-- Home -->
-		<div id="home">
-			<!-- logo -->
-			<div id="logo">
-				<img id="pkraden" src="img/Pak Raden.png">
-				<img src="img/Keraton logo.png">
-			</div>
+  <!-- Content -->
+	<div class="parallax">
+		<!-- Background -->
+  		<div class="parallax__layer parallax__layer--back">
+  		</div>
+  		<!-- Background END -->
 
-			<!-- countdown -->
-			<div id="countdown">
-			<div id="days" data-label="Days">
-				<div class="num">
-					<span class="d-1">0</span>
-					<span class="d-0">0</span>
+  		<!-- Content -->
+  		<div class="parallax__layer parallax__layer--base">
+
+
+  			<!-- Home -->
+  			<div id="home">
+  				<!-- logo -->
+  				<div id="logo">
+  					<img id="pkraden" src="img/Pak Raden.png">
+  					<img src="img/Keraton logo.png">
+  				</div>
+
+  				<!-- countdown -->
+  				<div id="countdown">
+					<div id="days" data-label="Days">
+						<div class="num">
+							<span class="d-1">0</span>
+							<span class="d-0">0</span>
+						</div>
+						<span>Days</span>
+					</div>
+					<div id="hrs"  data-label="Hours">
+						<div class="num">
+							<span class="d-1">0</span>
+							<span class="d-0">0</span>
+						</div>
+						<span>Hours</span>
+					</div>
+					<div id="min"  data-label="Minutes">
+						<div class="num">
+							<span class="d-1">0</span>
+							<span class="d-0">0</span>
+						</div>
+						<span>Minutes</span>
+					</div>
+					<div id="sec"  data-label="Seconds">
+						<div class="num">
+							<span class="d-1">0</span>
+							<span class="d-0">0</span>
+						</div>
+						<span>Seconds</span>
+					</div>
 				</div>
-				<span>Days</span>
-			</div>
-			<div id="hrs"  data-label="Hours">
-				<div class="num">
-					<span class="d-1">0</span>
-					<span class="d-0">0</span>
-				</div>
-				<span>Hours</span>
-			</div>
-			<div id="min"  data-label="Minutes">
-				<div class="num">
-					<span class="d-1">0</span>
-					<span class="d-0">0</span>
-				</div>
-				<span>Minutes</span>
-			</div>
-			<div id="sec"  data-label="Seconds">
-				<div class="num">
-					<span class="d-1">0</span>
-					<span class="d-0">0</span>
-				</div>
-				<span>Seconds</span>
-			</div>
-		</div>
-		<!-- Home END -->
+  			</div>
+  			<!-- Home END -->
+
+  			<!-- Trailer -->
+  			<div id="trailer">
+  				<div class="wrapper">
+	  				<div class="strip"></div>
+
+	  				<div>
+	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  					<a href="https://www.youtube.com/watch?v=ALWEriVpk_4">
+	  						<img class="still" src="img/t-1-placeholder.png">
+	  					</a>
+	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  					<a href="https://www.youtube.com/watch?v=ALWEriVpk_4">
+	  						<img class="still" src="img/t-1-placeholder.png">
+	  					</a>
+	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  					<a href="https://www.youtube.com/watch?v=ALWEriVpk_4">
+	  						<img class="still" src="img/t-1-placeholder.png">
+	  					</a>
+	  					<a href="https://www.facebook.com/isauw.huskies/videos/988764217881184/">
+	  						<img class="still" src="img/t-2-placeholder.png">
+	  					</a>
+	  				</div>
+
+	  				<div class="strip"></div>
+  				</div>
+  			</div>
+  			<!-- Trailer END -->
+
+        <!-- About -->
+        <div id="about">
+          <div class="stamp">
+            <img class="saveTheDate" src="img/stamp.png">
+            <img class="admission" src="img/Layer0.png">
+            <img class="parking" src="img/freepark.png">
+          </div>
+          <div class="left">
+            <img src="img/img4.png">
+          </div>
+          <div class="divider">
+            <img src="img/border2.png">
+          </div>
+          <div class="right">
+            <div class="date">
+              May 28, 2016
+            </div>
+
+            <div class="time">
+              3PM - 9PM
+            </div>
+
+            <div class="loc">
+              UW Hub Lawn
+            </div>
+
+            <div class="city">
+              4001 E Stevens Way NE<br>
+              Seattle, WA
+            </div>
+
+            <div class="free">
+              Free Parking - Free Admission
+            </div>
+          </div>
+          <div class="desc">
+            <p>
+            ISAUW's signature event, Keraton 2016, is back! Our annual event is the second largest Indonesian festival in the nation and we're inviting YOU to join us.
+            <br><br>
+            Experience the authentic Indonesian culture through a number of traditional Indonesian dances, music performances, games, and enjoy a plethora of delicious Indonesian cuisines.
+          </p>
+          </div>
+        </div>
+        <!-- About END -->
+
+        <!-- STATS -->
+        <div id="stats">
+          <img src="img/rope-pin.png">
+          <div id="pola">
+            <a href="https://www.facebook.com/media/set/?set=a.451878401569771.1073741832.181217765302504&type=3"><img src="img/pola1.png"></a>
+            <a href="https://www.facebook.com/media/set/?set=a.712361995521409.1073741843.181217765302504&type=3"><img src="img/pola2.png"></a>
+            <a href="https://www.facebook.com/media/set/?set=a.841987675892173.1073741852.181217765302504&type=3"><img src="img/pola3.png"></a>
+          </div>
+        </div>
+        <!-- STATS END -->
+      
+        <!-- Events -->
+        <div id="event">
+          <hr>
+          <h2>Events</h2>
+          <hr>
+          <div class="wrapper">
+            <div class="ev-item">
+              <img src="img/ev-perf.png">
+              <!--
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            -->
+            </div>
+
+            <div class="ev-item">
+              <img src="img/jc2.png">
+              <!--
+              <p>
+                Photo Jason Chen ^ 
+              </p>
+            -->
+            </div>
+
+            <div class="ev-item">
+              <img src="img/ev-food.png">
+              <!--
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            -->
+            </div>
+          </div>
+        </div>
+        <!-- Events END -->
+
+        <!-- Schedule 
+        <div id="schedule">
+          <hr>
+          <h2>Schedule</h2>
+          <hr>
+          <div id="timeline">
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            </div>
+
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            </div>
+
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            </div>
+
+            <div>
+              <span class="hours">time</span>
+              <p class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+              </p>
+            </div>
+
+          </div>
+        </div>
+         Schedule END -->
+
+        <!-- Food 
+        <div id="food">
+          <div class="title">
+            <hr>
+            <h2>Vendors</h2>
+            <hr>
+          </div>
+          
+          <div class="wrapper">
+            <div id="vendor-r1">
+              <div class="vendor">
+                <h3>ISAUW Drinks</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Shaved Ice</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Teh Botol</span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Soda Gembira</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Markisa Juice</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Ice Lemon Tea</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Coconut Water</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Sirsak Juice</span>
+                    <span class="price">$2</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="vendor">
+                <h3>Rajawali</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Jagung Bakar</span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Roti Bakar <span class="fd-ex">Grilled Bread (Nutella, Nutella/Cheese)</span></span>
+                    <span class="price">$4</span>
+                  </li>
+
+                  <li>
+                    <span class="fd">Roti Bakar <span class="fd-ex">Grilled Bread (Kaya)</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                  <li>
+                    <span class="fd">Jus Alpukat <span class="fd-ex">Avocado Juice</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                  <li>
+                    <span class="fd">Es Mambo <span class="fd-ex">Popsicle (chocolate, strawberry)</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="vendor">
+                <h3>ISANS</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Piscok Marabahaya <span class="fd-ex">Fried Choco Banana</span></span>
+                    <span class="price">2 for $6, 3 for $8</span>
+                  </li>
+                  <li>
+                    <span class="fd">Arum Manis <span class="fd-ex">Sugar Wafer</span></span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Sosis Gulung Mie <span class="fd-ex">Instant noodle with chicken sausage</span></span>
+                    <span class="price">2 for $5, 4 for $8, 6 for $10</span>
+                  </li>
+                  <li>
+                    <span class="fd">Kue Cubit <span class="fd-ex">Cake (flour, sugar, milk, baking powder)</span></span>
+                    <span class="price">5 for $6, 10 for $10</span>
+                  </li>
+                  <li>
+                    <span class="fd">Es Buah <span class="fd-ex">Ice with fruits</span></span>
+                    <span class="price">$4</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="vendor">
+                <h3>Indo Cafe</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Nasi Remes <span class="fd-ex">Rice with chicken, vegetables, peanut, eggs</span></span>
+                    <span class="price">$10</span>
+                  </li>
+                  <li>
+                    <span class="fd">Sate Ayam <span class="fd-ex">Chicken skewers</span></span>
+                    <span class="price">$7</span>
+                  </li>
+                  <li>
+                    <span class="fd">Es Cendol <span class="fd-ex">Ice with green rice flour jelly</span></span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Lemper <span class="fd-ex">Glutinous rice filled with chicken</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                  <li>
+                    <span class="fd">Kue Cenil <span class="fd-ex">Cake</span></span>
+                    <span class="price">$4</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="vendor-r2">
+              <div class="v-wrapper">
+                <div class="vendor">
+                  <h3>IFC Bellevue</h3>
+                  <hr>
+                  <ul>
+                    <li>
+                      <span class="fd">Popsicles</span>
+                      <span class="price">$2 / 3 icecubes</span>
+                    </li>
+                    <li>
+                      <span class="fd">Cream Puff</span>
+                      <span class="price">$2 / 3 creampuff</span>
+                    </li>
+                    <li>
+                      <span class="fd">Chocolate Ball</span>
+                      <span class="price">$3 / 3 chocoballs</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="vendor">
+                  <h3>Waroeng Jajanan</h3>
+                  <hr>
+                  <ul>
+                    <li>
+                      <span class="fd">Sate Padang <span class="fd-ex">Beef skewers</span></span>
+                      <span class="price">$7</span>
+                    </li>
+                    <li>
+                      <span class="fd">Es Krim Roti <span class="fd-ex">Ice cream bread</span></span>
+                      <span class="price">$4</span>
+                    </li>
+                    <li>
+                      <span class="fd">Pisang Goreng <span class="fd-ex">Fried Banana</span></span>
+                      <span class="price">$2 each or $3 for 2</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="vendor">
+                  <h3>Waroeng Jajanan</h3>
+                  <hr>
+                  <ul>
+                    <li>
+                      <span class="fd">Bakwan Malang <span class="fd-ex">Beef Meatball Soup</span></span>
+                      <span class="price">$8</span>
+                    </li>
+                    <li>
+                      <span class="fd">Bubur Ayam <span class="fd-ex">Chicken Congee</span></span>
+                      <span class="price">$7</span>
+                    </li>
+                    <li>
+                      <span class="fd">Nasi Padang <span class="fd-ex">Rice with beef, vegetables</span></span>
+                      <span class="price">$10</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <img src="img/vnd-1.png" style="width: 200px;margin-left: 25px;margin-right: 2px;">
+              <img src="img/vnd-2.png" style="width: 200px;margin-left: 2px;margin-right: 25px;">
+
+              <div class="v-wrapper">
+                <div class="vendor">
+                  <h3>IFC Bellevue</h3>
+                  <hr>
+                  <ul>
+                    <li>
+                      <span class="fd">Popsicles</span>
+                      <span class="price">$2 / 3 icecubes</span>
+                    </li>
+                    <li>
+                      <span class="fd">Cream Puff</span>
+                      <span class="price">$2 / 3 creampuff</span>
+                    </li>
+                    <li>
+                      <span class="fd">Chocolate Ball</span>
+                      <span class="price">$3 / 3 chocoballs</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="vendor">
+                  <h3>Waroeng Jajanan</h3>
+                  <hr>
+                  <ul>
+                    <li>
+                      <span class="fd">Sate Padang <span class="fd-ex">Beef skewers</span></span>
+                      <span class="price">$7</span>
+                    </li>
+                    <li>
+                      <span class="fd">Es Krim Roti <span class="fd-ex">Ice cream bread</span></span>
+                      <span class="price">$4</span>
+                    </li>
+                    <li>
+                      <span class="fd">Pisang Goreng <span class="fd-ex">Fried Banana</span></span>
+                      <span class="price">$2 each or $3 for 2</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="vendor">
+                  <h3>Waroeng Jajanan</h3>
+                  <hr>
+                  <ul>
+                    <li>
+                      <span class="fd">Bakwan Malang <span class="fd-ex">Beef Meatball Soup</span></span>
+                      <span class="price">$8</span>
+                    </li>
+                    <li>
+                      <span class="fd">Bubur Ayam <span class="fd-ex">Chicken Congee</span></span>
+                      <span class="price">$7</span>
+                    </li>
+                    <li>
+                      <span class="fd">Nasi Padang <span class="fd-ex">Rice with beef, vegetables</span></span>
+                      <span class="price">$10</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="vendor-r3">
+              <div class="vendor">
+                <h3>ISAUW Drinks</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Shaved Ice</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Teh Botol</span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Soda Gembira</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Markisa Juice</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Ice Lemon Tea</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Coconut Water</span>
+                    <span class="price">$2</span>
+                  </li>
+                  <li>
+                    <span class="fd">Sirsak Juice</span>
+                    <span class="price">$2</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="vendor">
+                <h3>Rajawali</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Jagung Bakar</span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Roti Bakar <span class="fd-ex">Grilled Bread (Nutella, Nutella/Cheese)</span></span>
+                    <span class="price">$4</span>
+                  </li>
+
+                  <li>
+                    <span class="fd">Roti Bakar <span class="fd-ex">Grilled Bread (Kaya)</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                  <li>
+                    <span class="fd">Jus Alpukat <span class="fd-ex">Avocado Juice</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                  <li>
+                    <span class="fd">Es Mambo <span class="fd-ex">Popsicle (chocolate, strawberry)</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="vendor">
+                <h3>ISANS</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Piscok Marabahaya <span class="fd-ex">Fried Choco Banana</span></span>
+                    <span class="price">2 for $6, 3 for $8</span>
+                  </li>
+                  <li>
+                    <span class="fd">Arum Manis <span class="fd-ex">Sugar Wafer</span></span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Sosis Gulung Mie <span class="fd-ex">Instant noodle with chicken sausage</span></span>
+                    <span class="price">2 for $5, 4 for $8, 6 for $10</span>
+                  </li>
+                  <li>
+                    <span class="fd">Kue Cubit <span class="fd-ex">Cake (flour, sugar, milk, baking powder)</span></span>
+                    <span class="price">5 for $6, 10 for $10</span>
+                  </li>
+                  <li>
+                    <span class="fd">Es Buah <span class="fd-ex">Ice with fruits</span></span>
+                    <span class="price">$4</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="vendor">
+                <h3>Indo Cafe</h3>
+                <hr>
+                <ul>
+                  <li>
+                    <span class="fd">Nasi Remes <span class="fd-ex">Rice with chicken, vegetables, peanut, eggs</span></span>
+                    <span class="price">$10</span>
+                  </li>
+                  <li>
+                    <span class="fd">Sate Ayam <span class="fd-ex">Chicken skewers</span></span>
+                    <span class="price">$7</span>
+                  </li>
+                  <li>
+                    <span class="fd">Es Cendol <span class="fd-ex">Ice with green rice flour jelly</span></span>
+                    <span class="price">$3</span>
+                  </li>
+                  <li>
+                    <span class="fd">Lemper <span class="fd-ex">Glutinous rice filled with chicken</span></span>
+                    <span class="price">$5</span>
+                  </li>
+                  <li>
+                    <span class="fd">Kue Cenil <span class="fd-ex">Cake</span></span>
+                    <span class="price">$4</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+         Food END -->
+
+        <!-- Volunteer-->
+        <div id="volunteer">
+          <div class="title">
+            <hr>
+            <h2>How to Contribute</h2>
+            <hr>
+          </div>
+
+          <div class="box">
+            <a href="../volunteer2016.php"><img src="img/volunteer2.png"></a>
+            <a href="../volunteer2016.php"><img class="stamp" src="img/postmark-1.png"></a>
+            <div class="desc">Volunteer opportunities at Keraton available!<br>
+            Sign up by clicking the ticket above!</div>
+          </div>
+          <div class="box">
+            <a href="https://www.gofundme.com/keraton2016"><img src="img/sponsor9.png"></a>
+            <a href="https://www.gofundme.com/keraton2016"><img class="stamp" src="img/postmark-1.png"></a>
+            <div class="desc">Support and donate by clicking the ticket above! <br> Check out our proposal <a href="Proposal2016.pdf">here</a>! </div>
+          </div>
+        </div>
+        <!-- Volunteer END -->
+
+        <!-- Officer -->
+        <div id="officers">
+          <div class="title">
+            <hr>
+            <h2>Meet Our Team</h2>
+            <hr>
+          </div>
+          <div class="wrapper">
+            <div class="off">
+              <img src="img/officers/alisson.png">
+              <span>Alisson Hartono</span>
+              <h4>President</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/gilbert.png">
+              <span>Gilbert Soesanto</span>
+              <h4>Vice President</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/harisson.png">
+              <span>Harisson Devara</span>
+              <h4>Director of Operation</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/sophie.png">
+              <span>Sophie Suhariono</span>
+              <h4>Director of Finance</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/mario.png">
+              <span>Alexander Mario</span>
+              <h4>Director Communication & Outreach</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/ivan.png">
+              <span>Ivan Tanggono</span>
+              <h4>Head of Event Organizer</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/kehin h.png">
+              <span>Kevin Hendarto</span>
+              <h4>Event Organizer</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/dhifa.png">
+              <span>Dhifa Maharani</span>
+              <h4>Event Organizer</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/madeline.png">
+              <span>Madeleine So</span>
+              <h4>Event Organizer</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/elsa.png">
+              <span>Elsa Tamara</span>
+              <h4>Event Organizer</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/jona.png">
+              <span>Jonathan Benhi</span>
+              <h4>Head of Inventory</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/dennis.png">
+              <span>Dennis Muljadi</span>
+              <h4>Inventory</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/josh.png">
+              <span>Joshua Imanuel</span>
+              <h4>Inventory</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/tiffany.png">
+              <span>Tifanny Wibisono</span>
+              <h4>Head of Creativity Management</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/bianca.png">
+              <span>Bianca Talakua</span>
+              <h4>Creativity Management</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/ivone.png">
+              <span>Ivone Liliana</span>
+              <h4>Creativity Management</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/gaby k.png">
+              <span>Gabriella Koesomo</span>
+              <h4>Creativity Management</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/gaby w.png">
+              <span>Gabriella Devi Widjaja</span>
+              <h4>Creativity Management</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/ursula.png">
+              <span>Ursula Michelle</span>
+              <h4>Creativity Management</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/felicia.png">
+              <span>Felicia Tanuwidjaja</span>
+              <h4>Head of Treasury</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/sharon.png">
+              <span>Sharon Theo</span>
+              <h4>Treasury</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/peter.png">
+              <span>Peter Tandio</span>
+              <h4>Head of Sponsorship</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/ang.png">
+              <span>Steven Angkasaputera</span>
+              <h4>Sponsorship</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/edbert.png">
+              <span>Edbert Mulia</span>
+              <h4>Sponsorship</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/masman.png">
+              <span>Kevin Masman</span>
+              <h4>Sponsorship</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/gwen.png">
+              <span>Gwendolyn Tjandra</span>
+              <h4>Sponsorship</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/gracia.png">
+              <span>Gracia Athalia</span>
+              <h4>Sponsorship</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/cindy p.png">
+              <span>Marcella Cindy Prasetio</span>
+              <h4>Head of Information Technology</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/cindy s.png">
+              <span>Cindy Suripto</span>
+              <h4>Information Technology</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/levana.png">
+              <span>Levana Tirtaguna</span>
+              <h4>Head of Marketing Communication</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/theresa.png">
+              <span>Theresa Utanto</span>
+              <h4>Marketing Communication</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/gevira.png">
+              <span>Gevira Felia</span>
+              <h4>Marketing Communication</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/diefa.png">
+              <span>Diefa Shabirah</span>
+              <h4>Marketing Communication</h4>
+            </div>
+            <div class="off">
+              <img src="img/officers/alyssa.png">
+              <span>Alyssa Setiawan</span>
+              <h4>Marketing Communication</h4>
+            </div>
+          </div>
+        </div>
+        <!-- Officer END -->
+
+        <!-- Footer -->
+        <section id="last-section" class="page fullwidth">
+        <header>
+          <nav>
+            <ul>
+              <li><a href="#" class="btn no-color" data-page="subscribe">Sponsors</a></li>
+              <li><a href="#" class="btn no-color" data-page="feedback">Feedback</a></li>
+              <li><a href="#" class="btn no-color" data-page="contacts">Contacts</a></li>
+            </ul>
+          </nav>
+          
+        </header>
+      </section>
+    
+    <div id="footer-space"></div>
+    
+    <!-- // FOOTER // -->
+    <footer id="footer">
+      <div class="wrapper">
+        
+        <!-- // SUBSCRIBE // -->
+        <section id="subscribe" class="page image">
+          
+        </section>
+        <!-- // END SUBSCRIBE // -->
+        
+        <!-- // FEEDBACK // -->
+        <section id="feedback" class="page image">
+          <div class="wrapper align-center">
+            <ul>
+              <li class="text">
+                <h2>Do you love it?</h2>
+                <hr>
+                <p>What do you want to know about Indonesia? What do you want to see? What do you want to taste? Have we covered them in KERATON 2014? Did we leave something out?</p>
+                <p>Throughout time, all we want is to give out the best and so we really appreciate your suggestions. Let us hear what you have to say! </p>
+              </li>
+              
+              <li>
+                <form action="engine/feedback.php" method="post" class="flat">
+                  <div>
+                    <input type="text" name="name" value="" placeholder="What is your name?">
+                    <input type="email" name="email" value="" placeholder="Your email address">
+                    <textarea name="message" placeholder="What do you want to say us?"></textarea>
+                  </div>
+                  
+                  <div>
+                    <span class="status" 
+                      data-success="Your message was succesfuly sent"
+                      data-error="Something goes wrong">
+                    </span>
+                    <input type="submit" value="Send" class="btn">
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // END FEEDBACK // -->
+        
+        <!-- // CONTACTS // -->
+        <section id="contacts" class="page image">
+          <div class="wrapper align-center">
+            
+            <div class="text" itemscope itemtype="http://schema.org/Organization">
+              <h2>Contact Us</h2>
+              <hr>
+              <p itemprop="address">Husky Union Building 232, <br>BOX 352238, <br>Seattle, WA 98195</p>
+              <p><span itemprop="email">Email: isauw@uw.edu</span><br>Website: <span itemprop="url">www.isauw.org</span></p>
+              <hr>
+              <ul class="social icons align-center">
+                <li><a href="#" class="icon-facebook"></a></li>
+                <li><a href="https://www.youtube.com/watch?v=3SHA2DM7Gxs&list=PL1ya6d1mzAvTbETjquI6wB665d3ctzaB1" class="icon-youtube"></a></li>
+                                <li><a href="https://twitter.com/isauw" class="icon-twitter"></a></li>
+                <li><a href="http://instagram.com/isauwhuskies" class="icon-instagram"></a></li>
+              </ul>
+            </div>
+            
+            <iframe id="map" width="1025" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Husky+Union+Building+(HUB),+Northeast+Stevens+Way,+Seattle,+WA&amp;aq=0&amp;oq=hus&amp;sll=47.613028,-122.342064&amp;sspn=0.27079,0.676346&amp;ie=UTF8&amp;hq=Husky+Union+Building+(HUB),+Northeast+Stevens+Way,+Seattle,+WA&amp;ll=47.655258,-122.30492&amp;spn=0.006295,0.006295&amp;t=m&amp;z=13&amp;output=embed"></iframe>
+
+            
+          </div>
+        </section>
+        <!-- // END CONTACTS // -->
+      
+      </div>
+
+      
+    </footer>
+        <!-- Footer END -->
+  		
+     
+
+      </div>
+  		<!-- Content END -->
+  </div>
+  
 
 
   	<!-- Script -->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/jquery.transit.js"></script>
   	<script src="js/countdown.js"></script>
+    <script src="js/main.js"></script>
   	<script type="text/javascript">
+    var dots = 0;
+    $(window).load(function() {
+      $('#loader').animate({opacity: 0}, 1000, 'easeInQuad', function() {
+        $('#loader').css("display", "none");
+        $("body").css("overflow", "auto");
+      });
+    });
+
+    var imgArray = Array();
+    imgArray[0] = new Image();
+    imgArray[0].src = "img/t-1.gif";
+
+    imgArray[1] = new Image();
+    imgArray[1].src = "img/t-2.gif";
+
+  	// Trailer stills and gifs
+  	var trailers = {
+  		"img/t-1-placeholder.png": "img/t-1.gif",
+  		"img/t-2-placeholder.png": "img/t-2.gif"
+  	};
+
+  	var gifs = {
+  		"img/t-1.gif" : "img/t-1-placeholder.png",
+  		"img/t-2.gif" : "img/t-2-placeholder.png"
+  	};
+
+    // ======================
+    //      NAVBAR
+    // ======================
+    $("#trigger").click(function() {
+      $("#navbar").toggleClass("out");
+    });
+
+
+    // =======================
+    //    TRAILER
+    // =======================
+    $("#trailer .still").mouseover(function() {
+      var key = $(this).attr('src');
+      $(this).attr("src", trailers[key]);
+    })
+
+    $("#trailer .still").mouseout(function() {
+      var key = $(this).attr('src');
+      $(this).attr("src", gifs[key]);
+    })
+
   	$(document).ready(function () {
-  		countdown("May 28, 2016 15:00:00");	
+      setInterval(function () {
+        if(dots < 3) {
+            $('#dot').append('.');
+            dots++;
+        } else {
+          $('#dot').text("");
+          dots = 0;
+        }
+      }, 600);
+
+      var trigger = $("#trigger img");
+      var home = $("#home");
+      var about = $("#about");
+      var events = $("#event");
+      //var food = $("#food");
+      var volunteer = $("#volunteer");
+      var officer = $("#officers");
+      var footer = $("#footer");
+      var schedule = $("#schedule");
+
+
+      // Countdown
+  		countdown("May 28, 2016 15:00:00");
+
+      // Scrolling	
+      $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('.parallax').stop().animate({
+            scrollTop: $($anchor.attr('href')).position().top
+        }, 1000, 'easeInQuad');
+
+        // close the menu
+        $("#navbar").removeClass("out");
+
+        //$("#postmark").css("top" , $(this).offset().top - 50);
+        //$("#postmark").css("display", "block");
+        event.preventDefault();
+      });
+
+      // Handle navbar
+      $('.parallax').scroll(function(e) {
+        var curr = $(".parallax").scrollTop();
+
+        
+
+        if (curr >= 0 && curr <= home.position().top + home.height()) {
+          // in home
+          trigger.attr("src", "img/home.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(2) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= about.position().top && curr <= about.position().top + about.height()) {
+          // in about
+          trigger.attr("src", "img/about.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(3) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= events.position().top - 1 && curr <= events.position().top + events.height()) {
+          // in events
+          trigger.attr("src", "img/perf.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(4) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } /*else if (curr >= food.position().top - 1 && curr <= food.position().top + food.height()) {
+          // in vendors
+          trigger.attr("src", "img/vendor.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        }*/ else if (curr >= volunteer.position().top - 1 && curr <= volunteer.position().top + volunteer.height()) {
+          // in volunteer
+          trigger.attr("src", "img/sponsor.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= officer.position().top - 1 && curr <= officer.position().top + officer.height()) {
+          // in officer
+          trigger.attr("src", "img/off.png");
+
+          $("#postmark").css("top" , $("#postcard div:nth-child(6) a").offset().top - 50);
+          $("#postmark").css("display", "block");
+        } else if (curr >= footer.position().top - 1 && curr <= footer.position().top + footer.height()) {
+          e.preventDefault();
+        } else {
+          // remove marker
+          $("#postmark").css("display", "none");
+        }
+
+        if (curr >= schedule.position().top - 100) {
+          $('#timeline div:nth-child(1) span').addClass("fadeIn");
+          $('#timeline div:nth-child(1) p').addClass("slideRight");
+        }
+
+        if(curr >= schedule.position().top){
+          $('#timeline div:nth-child(2) span').addClass("fadeIn");
+          $('#timeline div:nth-child(2) p').addClass("slideLeft");
+        
+        }
+        
+        if(curr >= schedule.position().top + 100){
+          $('#timeline div:nth-child(3) span').addClass("fadeIn");
+          $('#timeline div:nth-child(3) p').addClass("slideRight");
+        }
+        
+        if(curr >= schedule.position().top + 200){
+          $('#timeline div:nth-child(4) span').addClass("fadeIn");
+          $('#timeline div:nth-child(4) p').addClass("slideLeft");
+        }
+
+      });
+
+      var totalHeight = home.outerHeight() + $("#trailer").outerHeight() + $("#stats").outerHeight() + about.outerHeight() + events.outerHeight() + /*food.outerHeight()*/ + volunteer.outerHeight() + officer.outerHeight() + footer.outerHeight() - 0.5 * $(window).height();
+
+
+      var screenWidth = $(window).width();
+
+      if (screenWidth < 414) {
+        totalHeight -= $(window).height();
+      } 
+      // Parallax back layer size
+      $(".parallax__layer--back").css("height", totalHeight);    
+      
+
+  		
 	});
   	</script>
 
