@@ -449,7 +449,6 @@ body {
 #schedule {
 	display: inline-block;
     padding-top: 50px;
-    padding-left: 4%;
     text-align: center;
     margin-bottom: 100px;
 }
@@ -470,20 +469,21 @@ body {
 }
 
 #schedule #timeline div {
-	width: 50%;
+	width: 47%;
 	float: left;
-	margin: 0 0 10px;
-	padding: 20px 68px 0 0;
+	margin: 10px;
+	padding: 25px 68px 0 0;
 	position: relative;
 	text-align: right;
 	font-family: 'Bree Serif', serif;
+	font-size: 17px;
 }
 
 #schedule #timeline span {
 	position: absolute;
 	right: 0;
-	top: 30px;
-	font-size: 2em;
+	top: 25px;
+	font-size: 40px;
 	color: #999;
 }
 
@@ -513,7 +513,7 @@ body {
 	left: 0;
 	color: #ca0000;
 	right: auto;
-	top: auto;
+	top: 20px;
 }
 
 /*==========================
