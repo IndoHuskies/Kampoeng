@@ -643,9 +643,9 @@ body {
 #volunteer .stamp{
 	position: absolute;
 	display: inline-block;
-	top: 52%;
+	top: 40%;
 	left: 74%;
-	width: 100px; 
+	width: 80px; 
 	opacity: 0;
 }
 
