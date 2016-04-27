@@ -158,7 +158,7 @@
 	#about .right {
 		padding-top: 20px;
 		width: 85%;
-		margin-left: 35%;
+		margin-left: 20%;
 		float: none;
 		font-size: 5em;
 	}
@@ -169,6 +169,11 @@
 
 	#about .time, .city {
     	font-size: 4.5vw;
+	}
+
+	#about .free {
+		font-size: 4.75vw;
+		margin-left: -5%;
 	}
 
 	#stats > img {

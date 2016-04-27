@@ -232,6 +232,7 @@ body {
 	position: absolute;
 	top: -79px;
 	right: 200px;
+	z-index: 3;
 }
 
 #about .stamp .parking {
@@ -240,6 +241,7 @@ body {
 	position: absolute;
 	top: -27px;
 	right: 454px;
+	z-index: 3;
 }
 
 #about .stamp .admission {
@@ -249,6 +251,7 @@ body {
 	top: -20px;
 	right: 360px;
 	transform: rotate(5deg);
+	z-index: 3;
 }
 
 #about .divider img {
