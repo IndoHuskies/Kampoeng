@@ -779,7 +779,8 @@ body {
 #subscribe {
 	background-image: url('../img/sponsorweb.jpg');
 	width: 100%;
-	background-size: cover;
+	background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #subscribe form {
