@@ -428,10 +428,11 @@ body {
 }
 
 #event .ev-item p {
-	opacity: 0;
+	/*opacity: 0;*/
+	font-family:'Volkhov', serif;
 	transition: all 0.5s ease;
 	border: 1px solid black;
-    padding: 5px;
+    padding: 10px;
 }
 
 #event .ev-item img:hover + p {
@@ -549,7 +550,7 @@ body {
 	padding-right: 20px;
 	padding-bottom: 15px;
 	*/
-	width: 15em;
+	width: 20em;
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
@@ -571,7 +572,7 @@ body {
 #vendor-r2 img {
 	display: inline-block;
 	vertical-align: top;
-    margin-top: 50px;
+    margin-top: 10em;
     /*-webkit-filter: sepia(30%) drop-shadow(1px 2px 2px rgba(0,0,0,0.5));*/
 }
 
@@ -581,6 +582,7 @@ body {
 
 #vendor-r2 .v-wrapper {
 	display: inline-block;
+	vertical-align: top;
 }
 
 .vendor span.price {
