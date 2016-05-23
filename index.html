@@ -256,43 +256,134 @@
         </div>
         <!-- Events END -->
 
-        <!-- Schedule
+        <!-- Schedule -->
         <div id="schedule">
           <hr>
           <h2>Schedule</h2>
           <hr>
           <div id="timeline">
             <div>
-              <span class="hours">time</span>
+              <span class="hours">3:00 - 3:20 PM</span>
               <p class="desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+                <p style="font-size: 35px">Opening Ceremony</p>
+              </p>
+            </div>
+            <div>
+              <span class="hours">3:20 - 3:25PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Puspanjali</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: Parwati Martin &amp; Niluh Porter
+              </p>
+            </div>
+            <div>
+              <span class="hours">3:30 - 3:45 PM</span>
+              <p style="font-size: 35px">Vocal Performance: Acoustic</p>
+              <p class="desc">
+                Performance by: Adriana Hartono &amp; Ricardo
+              </p>
+            </div>
+            <div>
+              <span class="hours">3:45 - 4:00PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Tor-Tor Sigalegale, Bajidor</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: Indonesian Cultural Association
               </p>
             </div>
 
             <div>
-              <span class="hours">time</span>
+              <span class="hours">4:00 - 4:20 PM</span>
+              <p style="font-size: 35px">Band Performance</p>
               <p class="desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+                Performance by: The Potter's
+              </p>
+            </div>
+            <div>
+              <span class="hours">4:25 - 4:30PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Mojang Sari</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: Nurika &amp; Tikka
+              </p>
+            </div>
+            <div>
+              <span class="hours">4:30 - 4:45 PM</span>
+              <p style="font-size: 35px">Traditional Music: Kecapi Suling</p>
+              <p class="desc">
+                Performance by: Ade Suparman &amp; Manuel
+              </p>
+            </div>
+            <div>
+              <span class="hours">4:45 - 4:55PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Langit Biru</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: Nurika
+              </p>
+            </div>
+
+             <div>
+              <span class="hours">4:55 - 5:05 PM</span>
+              <p style="font-size: 35px">Contemporary Dance</p>
+              <p class="desc">
+                Performance by: Green River Community College
+              </p>
+            </div>
+            <div>
+              <span class="hours">5:05 - 5:25PM</span>
+              <p style="font-size: 35px">Band Performance</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: Juhan &amp; The Tribes
+              </p>
+            </div>
+            <div>
+              <span class="hours">5:30 - 5:45 PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Gunung Sari</p>
+              <p class="desc">
+                Performance by: Christina Sunardi
+              </p>
+            </div>
+            <div>
+              <span class="hours">5:45 - 6:00PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Gaplek</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: maria
               </p>
             </div>
 
             <div>
-              <span class="hours">time</span>
+              <span class="hours">6:00 - 6:20 PM</span>
+              <p style="font-size: 35px">Vocal Performance: Acoustic</p>
               <p class="desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
+                Performance by: Ricardo
+              </p>
+            </div>
+            <div>
+              <span class="hours">6:25 - 6:30PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Legong Rangda, Bali</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: Greg &amp; Niluh
+              </p>
+            </div>
+            <div>
+              <span class="hours">6:35 - 6:45 PM</span>
+              <p style="font-size: 35px">Traditional Dance: Tari Saman</p>
+              <p class="desc">
+                Performance by: Permias Bellingham
+              </p>
+            </div>
+            <div>
+              <span class="hours">7:00 - 8:00PM</span>
+              <p style="font-size: 35px">Vocal Performance: JASON CHEN</p>
+              <p class="desc" style="text-indent: 30px">
+              Performance by: Jason Chen
               </p>
             </div>
 
             <div>
-              <span class="hours">time</span>
-              <p class="desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic putavisset.
-              </p>
+              <span class="hours">8:05 - 8:30PM</span>
+              <p style="font-size: 35px">Raffle &amp; Closing</p>
             </div>
-
           </div>
         </div>
-         Schedule END -->
+         <!-- Schedule END -->
 
         <!-- Food -->
         <div id="food">
@@ -899,6 +990,12 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
     var dots = 0;
+    var anim = true;
+
+    if(window.innerWidth <= 1024){
+      anim = false;
+    }
+
     $(window).load(function() {
       $('#loader').animate({opacity: 0}, 1000, 'easeInQuad', function() {
         $('#loader').css("display", "none");
@@ -964,7 +1061,7 @@
       var volunteer = $("#volunteer");
       var officer = $("#officers");
       var footer = $("#footer");
-      //var schedule = $("#schedule");
+      var schedule = $("#schedule");
 
 
       // Countdown
@@ -1033,32 +1130,110 @@
           // remove marker
           $("#postmark").css("display", "none");
         }
-        /*
-        if (curr >= schedule.position().top - 130) {
+        
+        if (anim && curr >= schedule.position().top - 100) {
           $('#timeline div:nth-child(1) span').addClass("expandUp");
           $('#timeline div:nth-child(1) p').css("visibility", "visible");
           $('#timeline div:nth-child(1) p').addClass("stretchLeft");
-
-
-          setTimeout(function () {
-            $('#timeline div:nth-child(2) span').show().addClass('expandUp');
-            $('#timeline div:nth-child(2) p').css("visibility", "visible");
-            $('#timeline div:nth-child(2) p').show().addClass("stretchRight");}, 500
-          );
-
-          setTimeout(function () {
-            $('#timeline div:nth-child(3) span').show().addClass('expandUp');
-            $('#timeline div:nth-child(3) p').css("visibility", "visible");
-            $('#timeline div:nth-child(3) p').show().addClass("stretchLeft");}, 1000
-          );
-
-          setTimeout(function () {
-            $('#timeline div:nth-child(4) span').show().addClass('expandUp');
-            $('#timeline div:nth-child(4) p').css("visibility", "visible");
-            $('#timeline div:nth-child(4) p').show().addClass("stretchRight");}, 1500
-          );
         }
-        */
+
+        if (anim && curr >= schedule.position().top) {
+          $('#timeline div:nth-child(2) span').addClass("expandUp");
+          $('#timeline div:nth-child(2) p').css("visibility", "visible");
+          $('#timeline div:nth-child(2) p').addClass("stretchRight");
+        }
+
+        if (anim && curr >= schedule.position().top + 100) {
+          $('#timeline div:nth-child(3) span').addClass("expandUp");
+          $('#timeline div:nth-child(3) p').css("visibility", "visible");
+          $('#timeline div:nth-child(3) p').addClass("stretchLeft");
+        }
+
+        if (anim && curr >= schedule.position().top + 200) {
+          $('#timeline div:nth-child(4) span').addClass("expandUp");
+          $('#timeline div:nth-child(4) p').css("visibility", "visible");
+          $('#timeline div:nth-child(4) p').addClass("stretchRight");
+        }
+
+        if (anim && curr >= schedule.position().top + 300) {
+          $('#timeline div:nth-child(5) span').addClass("expandUp");
+          $('#timeline div:nth-child(5) p').css("visibility", "visible");
+          $('#timeline div:nth-child(5) p').addClass("stretchLeft");
+        }
+
+        if (anim && curr >= schedule.position().top + 400) {
+          $('#timeline div:nth-child(6) span').addClass("expandUp");
+          $('#timeline div:nth-child(6) p').css("visibility", "visible");
+          $('#timeline div:nth-child(6) p').addClass("stretchRight");
+        }
+
+        if (anim && curr >= schedule.position().top + 500) {
+          $('#timeline div:nth-child(7) span').addClass("expandUp");
+          $('#timeline div:nth-child(7) p').css("visibility", "visible");
+          $('#timeline div:nth-child(7) p').addClass("stretchLeft");
+        }
+
+        if (anim && curr >= schedule.position().top + 600) {
+          $('#timeline div:nth-child(8) span').addClass("expandUp");
+          $('#timeline div:nth-child(8) p').css("visibility", "visible");
+          $('#timeline div:nth-child(8) p').addClass("stretchRight");
+        }
+
+        if (anim && curr >= schedule.position().top + 700) {
+          $('#timeline div:nth-child(9) span').addClass("expandUp");
+          $('#timeline div:nth-child(9) p').css("visibility", "visible");
+          $('#timeline div:nth-child(9) p').addClass("stretchLeft");
+        }
+
+        if (anim && curr >= schedule.position().top + 800) {
+          $('#timeline div:nth-child(10) span').addClass("expandUp");
+          $('#timeline div:nth-child(10) p').css("visibility", "visible");
+          $('#timeline div:nth-child(10) p').addClass("stretchRight");
+        }
+
+        if (anim && curr >= schedule.position().top + 900) {
+          $('#timeline div:nth-child(11) span').addClass("expandUp");
+          $('#timeline div:nth-child(11) p').css("visibility", "visible");
+          $('#timeline div:nth-child(11) p').addClass("stretchLeft");
+        }
+
+        if (anim && curr >= schedule.position().top + 1000) {
+          $('#timeline div:nth-child(12) span').addClass("expandUp");
+          $('#timeline div:nth-child(12) p').css("visibility", "visible");
+          $('#timeline div:nth-child(12) p').addClass("stretchRight");
+        }
+
+        if (anim && curr >= schedule.position().top + 1100) {
+          $('#timeline div:nth-child(13) span').addClass("expandUp");
+          $('#timeline div:nth-child(13) p').css("visibility", "visible");
+          $('#timeline div:nth-child(13) p').addClass("stretchLeft");
+        }
+
+        if (anim && curr >= schedule.position().top + 1200) {
+          $('#timeline div:nth-child(14) span').addClass("expandUp");
+          $('#timeline div:nth-child(14) p').css("visibility", "visible");
+          $('#timeline div:nth-child(14) p').addClass("stretchRight");
+        }
+
+        if (anim && curr >= schedule.position().top + 1300) {
+          $('#timeline div:nth-child(15) span').addClass("expandUp");
+          $('#timeline div:nth-child(15) p').css("visibility", "visible");
+          $('#timeline div:nth-child(15) p').addClass("stretchLeft");
+        }
+
+        if (anim && curr >= schedule.position().top + 1400) {
+          $('#timeline div:nth-child(16) span').addClass("expandUp");
+          $('#timeline div:nth-child(16) p').css("visibility", "visible");
+          $('#timeline div:nth-child(16) p').addClass("stretchRight");
+        }
+
+
+        if (anim && curr >= schedule.position().top + 1500) {
+          $('#timeline div:nth-child(17) span').addClass("expandUp");
+          $('#timeline div:nth-child(17) p').css("visibility", "visible");
+          $('#timeline div:nth-child(17) p').addClass("stretchLeft");
+        }
+        
       });
 
       var totalHeight = home.outerHeight() + $("#trailer").outerHeight() + $("#stats").outerHeight() + about.outerHeight() + events.outerHeight() + /*food.outerHeight()*/ + volunteer.outerHeight() + officer.outerHeight() + footer.outerHeight() - 0.5 * $(window).height();
