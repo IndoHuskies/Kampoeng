@@ -61,10 +61,10 @@
           <a class="page-scroll" href="#event"><img src="img/perf.png"></a>
           <span>Events</span>
       </div>
-      <!--<div>
+      <div>
           <a class="page-scroll" href="#food"><img src="img/vendor.png"></a>
           <span>Vendors</span>
-      </div>-->
+      </div>
       <div>
           <a class="page-scroll" href="#volunteer"><img src="img/sponsor.png"></a>
           <span>Get Involved</span>
@@ -619,6 +619,7 @@
                   </li>
                 </ul>
               </div>
+              <!--
               <div class="vendor">
                 <h3>Drinks</h3>
                 <hr>
@@ -653,6 +654,7 @@
                   </li>
                 </ul>
               </div>
+            -->
               <div class="vendor">
                 <h3>Rajawali</h3>
                 <hr>
@@ -1057,7 +1059,7 @@
       var home = $("#home");
       var about = $("#about");
       var events = $("#event");
-      //var food = $("#food");
+      var food = $("#food");
       var volunteer = $("#volunteer");
       var officer = $("#officers");
       var footer = $("#footer");
@@ -1106,23 +1108,23 @@
 
           $("#postmark").css("top" , $("#postcard div:nth-child(4) a").offset().top - 50);
           $("#postmark").css("display", "block");
-        } /*else if (curr >= food.position().top - 1 && curr <= food.position().top + food.height()) {
+        } else if (curr >= food.position().top - 1 && curr <= food.position().top + food.height()) {
           // in vendors
           trigger.attr("src", "img/vendor.png");
 
           $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
           $("#postmark").css("display", "block");
-        }*/ else if (curr >= volunteer.position().top - 1 && curr <= volunteer.position().top + volunteer.height()) {
+        } else if (curr >= volunteer.position().top - 1 && curr <= volunteer.position().top + volunteer.height()) {
           // in volunteer
           trigger.attr("src", "img/sponsor.png");
 
-          $("#postmark").css("top" , $("#postcard div:nth-child(5) a").offset().top - 50);
+          $("#postmark").css("top" , $("#postcard div:nth-child(6) a").offset().top - 50);
           $("#postmark").css("display", "block");
         } else if (curr >= officer.position().top - 1 && curr <= officer.position().top + officer.height()) {
           // in officer
           trigger.attr("src", "img/off.png");
 
-          $("#postmark").css("top" , $("#postcard div:nth-child(6) a").offset().top - 50);
+          $("#postmark").css("top" , $("#postcard div:nth-child(7) a").offset().top - 50);
           $("#postmark").css("display", "block");
         } else if (curr >= footer.position().top - 1 && curr <= footer.position().top + footer.height()) {
           e.preventDefault();
@@ -1236,7 +1238,7 @@
         
       });
 
-      var totalHeight = home.outerHeight() + $("#trailer").outerHeight() + $("#stats").outerHeight() + about.outerHeight() + events.outerHeight() + /*food.outerHeight()*/ + volunteer.outerHeight() + officer.outerHeight() + footer.outerHeight() - 0.5 * $(window).height();
+      var totalHeight = home.outerHeight() + $("#trailer").outerHeight() + $("#stats").outerHeight() + about.outerHeight() + events.outerHeight() + food.outerHeight() + /*schedule.outerHeight() +*/ volunteer.outerHeight() + officer.outerHeight() + footer.outerHeight() - 0.5 * $(window).height();
 
 
       var screenWidth = $(window).width();
